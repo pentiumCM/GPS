@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Events - jQuery EasyUI Demo</title>
+	<link href="Css/index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="EasyUI/themes/default/easyui.css" />    <link rel="stylesheet" type="text/css" href="EasyUI/themes/color.css" />    <link rel="stylesheet" type="text/css" href="EasyUI/themes/icon.css" />      <script type="text/javascript" src="EasyUI/jquery.min.js"></script>      <script type="text/javascript" src="EasyUI/jquery.easyui.min.js"></script>     <script type="text/javascript" src="Js/GenerageGuid.js"></script>     <script type="text/javascript" src="Js/JsCookies.js"></script>     <script type="text/javascript" src="Js/AutoComplete.js"></script> 
+    <script type="text/javascript" language="javascript"></script>
+    <style type="text/css">
+        
+	    /* 以下为自动提示框*/
+	    .search{ 
+            text-align: left; 
+            position:relative; 
+        } 
+        .autocomplete{ 
+            border: 1px solid #9ACCFB; 
+            background-color: white; 
+            text-align: left; 
+        } 
+        .autocomplete li{ 
+            list-style-type: none; 
+        } 
+        .clickable { 
+            cursor: default; 
+        } 
+        .highlight { 
+            background-color: #9ACCFB; 
+        }
+    </style>
+</head>
+<body>
+<div id="DivAutoComplete"></div>
+	<div><input type="text" id="combox1"></div>
+	<div><input type="text" id="Text1"></div>
+	<input id="txtVeh" name = "txtVeh" type="text" value="" class="easyui-textbox" data-options="				    prompt:'请输入车牌号',				    icons:[{
+				        iconCls:'icon-online',
+				        handler: function(e){
+					        InitTree();
+				        }
+			        }]				"  />
+<div id = "search" class="search"> 
+                    <label for="search-text">请输入关键词</label><input type="text" id="search-text" name="search-text" /> 
+                    <input type="button" id="submit" value="搜索"/> 
+                </div>
+	<div class="panel combo-p" style="z-index: 10; position: absolute; display: none;" jQuery1113040363154916684146="6">
+	    <div title="" class="combo-panel panel-body panel-body-noheader" jQuery1113040363154916684146="8">
+	        <div class="combobox-item" id="_easyui_combobox_i1_1">dd</div>
+	    </div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+        
+        $(document).ready(function() {             var availableTags = [
+              "ActionScript",
+              "AppleScript",
+              "Asp",
+              "BASIC",
+              "C",
+              "C++",
+              "Scala",
+              "Scheme"
+            ];            var json="["; 
+            for(var i = 0; i < availableTags.length; i++) { 
+                if(i == 0)
+                {
+                    json += "\""+ availableTags[i] + "\""; 
+                }
+                else
+                {
+                    json += ",\""+ availableTags[i] + "\""; 
+                }
+            } 
+            json += "]";             AutoText("txtVeh",$.parseJSON(json));        });
+
+        function onComboboxHidePanel() {
+        var el = $(this);
+        el.combobox('textbox').focus();
+        // 检查录入内容是否在数据里
+        var opts = el.combobox("options");
+        var data = el.combobox("getData");
+        var value = el.combobox("getValue");
+        // 有高亮选中的项目, 则不进一步处理
+        var panel = el.combobox("panel");
+        var items = panel.find(".combobox-item-selected");
+        if (items.length > 0) {
+            var values = el.combobox("getValues");
+            el.combobox("setValues", values);
+            return;
+        }
+        var allowInput = opts.allowInput;
+        if (allowInput) {
+            var idx = data.length;
+
+            data[idx] = [];
+            data[idx][opts.textField] = value;
+            data[idx][opts.valueField] = value;
+            el.combobox("loadData", data);
+        } else {
+            // 不允许录入任意项, 则清空
+            el.combobox("clear");
+        }
+    }
+    $("#combox1").combobox({
+        required: true,
+        editable: true,
+        missingMessage: '请选择装载物料',
+        valueField: "id",
+        textField: "text",
+        method: 'get',
+        url: 'combo.json',
+        mode: "local",
+        onHidePanel: onComboboxHidePanel,
+        filter: function (q, row) {
+            //定义当'mode'设置为'local'时如何过滤本地数据，函数有2个参数：
+            //q：用户输入的文本。
+            //row：列表行数据。
+            //返回true的时候允许行显示。
+            //return row[$(this).combobox('options').textField].indexOf(q) > -1;
+            return row["spell"].indexOf(q) >= 0;
+        }
+    });
+    </script>

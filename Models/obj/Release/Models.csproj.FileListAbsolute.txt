@@ -1,0 +1,10 @@
+D:\WebH5\Models\bin\Release\Models.dll
+D:\WebH5\Models\bin\Release\Models.pdb
+D:\WebH5\Models\bin\Release\Newtonsoft.Json.dll
+D:\WebH5\Models\bin\Release\Newtonsoft.Json.pdb
+D:\WebH5\Models\bin\Release\Newtonsoft.Json.xml
+D:\WebH5\Models\obj\Release\Models.csprojAssemblyReference.cache
+D:\WebH5\Models\obj\Release\Models.csproj.CoreCompileInputs.cache
+D:\WebH5\Models\obj\Release\Models.csproj.CopyComplete
+D:\WebH5\Models\obj\Release\Models.dll
+D:\WebH5\Models\obj\Release\Models.pdb

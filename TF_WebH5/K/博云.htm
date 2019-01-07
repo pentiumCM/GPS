@@ -1,0 +1,2199 @@
+﻿
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="renderer" content="webkit" /><title>
+	首页
+</title><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+        body
+        {
+            font-size: 12px;
+            background-color: #F7F7F7;
+            overflow: auto;
+            color: #333333;
+            margin: 0px 5px 0px 5px;
+            border: 1px solid red;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        inputSearch a:hover
+        {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        a:active
+        {
+            text-decoration: none;
+            border-color: #333333;
+        }
+
+        .top
+        {
+            border: 0px solid red;
+            height: 0px;
+            padding-left: 20px;
+            vertical-align: middle;
+            background-color: #1E293D;
+            color: #FFFFFF;
+        }
+
+            .top table
+            {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                height: 40px;
+            }
+
+        .menu
+        {
+            border: 0px solid #8DB2E3;
+            height: 45px;
+            line-height: 40px;
+            padding-left: 20px;
+            background-color: #F7F7F7;
+            font-size: 12px;
+        }
+
+        .tab
+        {
+            border: 0px solid red;
+            margin-top: 1px;
+        }
+
+
+        .btnOver
+        {
+            height: 20px;
+            width: 60px;
+            text-align: center;
+            background-color: #1E293D;
+            color: #FFFFFF;
+        }
+
+        .btnOut
+        {
+            height: 20px;
+            width: 60px;
+            text-align: center;
+            background-color: #F7F7F7;
+            color: #333333;
+        }
+
+        .btnOverLeft
+        {
+            height: 20px;
+            width: 60px;
+            text-align: right;
+            background-color: #1E293D;
+            color: #FFFFFF;
+        }
+
+        .btnOutLeft
+        {
+            height: 20px;
+            width: 60px;
+            text-align: right;
+            background-color: #F7F7F7;
+            color: #333333;
+        }
+
+        .btnOverRight
+        {
+            height: 20px;
+            width: 20px;
+            text-align: left;
+            background-color: #1E293D;
+            color: #FFFFFF;
+        }
+
+        .btnOutRight
+        {
+            height: 20px;
+            width: 20px;
+            text-align: left;
+            background-color: #F7F7F7;
+            color: #333333;
+        }
+
+        .menuPOver
+        {
+            color: #FFFFFF;
+            background-color: #1E293D;
+        }
+
+        .menuPOut
+        {
+            color: #000000;
+            background-color: #F7F7F7;
+        }
+
+        .menuCOver
+        {
+            color: #DA6931;
+        }
+
+        .menuCOut
+        {
+            color: #FFFFFF;
+        }
+
+        .header-nav
+        {
+            list-style: none;
+        }
+
+        .inputSearch
+        {
+            margin-right: 10px;
+            border: none;
+            padding-left: 30px;
+            float: right;
+            width: 220px;
+            height: 25px;
+            margin-top: 5px;
+            background: url('../Images/searchGrey.png') no-repeat center left;
+            background-position: 8px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+            .inputSearch:focus
+            {
+                outline: none;
+            }
+
+        /*菜单*/
+
+
+        li a
+        {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+            li a:hover
+            {
+                color: #f8cb3b;
+                text-decoration: none;
+            }
+
+
+
+        .rp:hover
+        {
+            background-color: rgb(255, 255, 255);
+            border-left: 1px solid #AAA;
+            border-right: 1px solid #AAA;
+        }
+
+        #mn li
+        {
+            float: left;
+            padding: 9.5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        .rpContext
+        {
+            margin-left: -11px;
+            position: absolute;
+            display: none;
+        }
+
+
+        .reprr
+        {
+            color: #777777;
+        }
+
+        .moveon
+        {
+            margin-left: -11px;
+            position: absolute;
+            display: block;
+        }
+
+
+
+
+        .reptype
+        {
+            color: #D32338;
+            font-size: 15px;
+        }
+
+        .repnav
+        {
+            color: #5993AA;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+            .repnav:hover
+            {
+                color: #494748;
+                margin-left: 15px;
+                margin-top: 10px;
+            }
+
+        .userContext
+        {
+            height: 55px;
+            width: 100px;
+            background-color: white;
+            position: absolute;
+            border: 1px solid #AAA;
+            -moz-box-shadow: 2px 6px 10px #D1D1D1;
+            -webkit-box-shadow: 2px 6px 10px #D1D1D1;
+            box-shadow: 2px 6px 10px #D1D1D1;
+            float: right;
+            margin-left: -70px;
+            margin-top: -5px;
+            display: none;
+        }
+
+        .userContextmoveon
+        {
+            border-top: 1px solid #bbb;
+            border-bottom: 1px solid #8F8A8A;
+            border-left: 1px solid #bbb;
+            border-right: 1px solid #BBB8B8;
+            -moz-box-shadow: 0px 1px 0px #ABB0B4;
+            -webkit-box-shadow: 0px 1px 0px #ABB0B4;
+            box-shadow: 0px 1px 0px #ABB0B4;
+            border-radius: 3px;
+            background-color: white;
+            float: right;
+            margin-left: -70px;
+            margin-top: -1px;
+            display: block;
+        }
+
+        .gaishu
+        {
+        }
+
+            .gaishu:hover
+            {
+                background-color: #4da7dc;
+                border: 1px solid white;
+            }
+
+        .duser:hover
+        {
+            border-radius: 3px;
+            background-color: #73C9FF;
+            cursor: pointer;
+        }
+
+        .tx:hover
+        {
+            background-color: rgb(213, 213, 213);
+            border-radius: 3px;
+        }
+
+        .repLis
+        {
+            color: #777777;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /*导航框样式*/
+        #Navigation
+        {
+            width: 45px;
+            height: 200px;
+            border: 1px solid #e0e0e0;
+            background-color: #fdfdfd;
+            position: fixed;
+            top: 205px;
+            right: 0;
+            z-index: 1024;
+        }
+
+        #NavTop
+        {
+            text-align: center;
+            line-height: 43px;
+            font-size: 14px;
+            border-bottom: 1px solid #eaeaea;
+            color: #999;
+        }
+
+        #NavShowIcon div
+        {
+            width: 40px;
+            margin-top: 10px;
+            height: 40px;
+            margin-left: 8px;
+        }
+
+        .navRight
+        {
+            cursor: pointer;
+            margin-top: -2px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            border: 1px solid #ccc;
+            background-color: #4f9cee;
+            float: left;
+            font-size: 16px;
+            border-radius: 20px;
+            text-align: center;
+            margin-left: -16px;
+        }
+        /*#Remind
+        {
+            background: transparent url(Images/Nav/到期提醒灰色.png) no-repeat!important;
+        }
+
+            #Remind:hover
+            {
+                background: transparent url(Images/Nav/到期提醒黄色.png) no-repeat!important;
+                cursor: pointer;
+            }
+
+        #vehMap
+        {
+            background: transparent url(Images/Nav/车辆分布图灰色.png) no-repeat!important;
+        }
+
+            #vehMap:hover
+            {
+                background: transparent url(Images/Nav/车辆分布图黄色.png) no-repeat!important;
+                cursor: pointer;
+            }
+
+        #OnlineRate
+        {
+            background: transparent url(Images/Nav/车辆在线率灰色.png) no-repeat!important;
+        }
+
+            #OnlineRate:hover
+            {
+                background: transparent url(Images/Nav/车辆在线率黄色.png) no-repeat!important;
+                cursor: pointer;
+            }*/
+
+        #refresh
+        {
+            background-color: none;
+        }
+
+            #refresh:hover
+            {
+                border-radius: 3px;
+                background-color: #73C9FF;
+                cursor: pointer;
+            }
+    </style>
+
+
+</head>
+
+<body id="context" style="width: 100%; height: 100%; overflow: hidden;" class="yui-skin-sam">
+<form method="post" action="./Main.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Kg3TbDTA1di2gIV1w8k1QBYKamnWi6Mf5dbPIq+QknghrPRvtWGhFvrBGT5ahcPKCK9w+jE0zRKrBm6fV1QP/td2dAQBGMw14moktfPPeP8=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="202EA31B" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="KsGnst3boFbmvRG7NhkVq6T1otWEErO0Ylui/x3yjGw91DNJrEfPL3ACJbQVo6TUbQzB3k32kX8u2jVQli/5RvmNym8VDn3TUsH2kNuonRBEB7+KHddNWDBESieLauYM" />
+</div>
+    
+    <!--<div id="divLoading2" style="width: 100%; height: 100%; position: absolute; background-color: #2869c5; z-index: 110;">
+        <div id="divLoading" style="width: 100%; height: 100%;" bg="Images/450.jpg">
+            <div style="color: #fff; font-family: Arial, Helvetica; top: 40%; position: absolute; width: 100%; text-align: center;">
+                <div style="font-size: 36px; font-weight: bold;" class="welcome">欢迎使用车辆监控系统V3 </div>
+                <div style="font-size: 15px; margin-top: 10px;">系统正在加载，请稍后...</div>
+            </div>
+        </div>
+    </div>-->
+    
+    <div style="position: fixed; width: 100%; z-index: 100;">
+        <div style="min-width: 1000px; height: 35px; background-color: #6296DD; border-bottom: 1px solid #5B85E0; position: relative;">
+            
+            
+
+            <img src="Images/logoset/菜单栏Logo.png" style="margin-left: 10px; float: left; position: absolute;" />
+            
+
+            <div style="min-width: 500px; margin-left: 180px; float: left; position: absolute; bottom: 0;">
+                <ul id="mn" style="height: 35px;">
+                    <li><a style="color: #f8cb3b;">首页</a>
+                    </li>
+                    <li><a href="navigation/MonitoringCenter.aspx" target="_blank">监控中心</a>
+                    </li>
+                    <li><a href="navigation/Trajectory/Trajectory.aspx" target="_blank">轨迹回放</a>
+                    </li>
+                    <li><a href="navigation/MyMap/MyMap.aspx" target="_blank">我的地图</a>
+                    </li>
+                    <li class="rp" onmouseover="rpover();" onmouseout="rpmove();"><a id="report" href="navigation/Report.aspx" target="_blank">报表<img height="8px;" style="margin-left: 3px;" src="../../Images/toggle_down.png" /></a>
+                        <div id="rpContext" class="rpContext">
+                            <div style="height: 12px; border-left: 1px solid #AAA; width: 61px; background-color: white;">
+                            </div>
+                            <div style="height: 220px; width: 450px; background-color: white; border-right: 1px solid #AAA; border-bottom: 1px solid #AAA; border-left: 1px solid #AAA; -moz-box-shadow: 1px 5px 5px #D1D1D1; -webkit-box-shadow: 1px 5px 5px #D1D1D1; box-shadow: 1px 5px 5px #D1D1D1;">
+
+                                <table style="height: 100%; width: 100%;">
+                                    <tr>
+                                        <td style="width: 150px;">
+                                            <div style="margin-left: 30px; margin-top: 20px;">
+                                                <div class="reptype">行驶数据分析</div>
+
+
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=ACC" target="_blank">ACC状态报表</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=OverSpeed" target="_blank">速度筛选查询</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Park" target="_blank">停车数据统计</a></div>
+                                            </div>
+                                            <div style="margin-left: 30px; margin-top: 20px;">
+                                                <div class="reptype">报警</div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Alarm" target="_blank">报警明细查询</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Video" target="_blank">视频报警明细</a></div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 150px;">
+                                            <div style="margin-left: 30px; margin-top: 20px;">
+                                                <div class="reptype">里程</div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=MileageDay" target="_blank">里程日报表</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Travel" target="_blank">行驶里程报表</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Mileage" target="_blank">里程报表</a></div>
+                                            </div>
+                                            <div style="margin-left: 30px; margin-top: 20px;">
+                                                <div class="reptype">终端指令</div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Message" target="_blank">调度信息查询</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Cmd" target="_blank">终端指令记录</a></div>
+                                            </div>
+
+                                        </td>
+                                        <td style="width: 150px;">
+
+                                            <div style="margin-left: 30px; margin-top: 20px;">
+                                                <div class="reptype">其他</div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Img" target="_blank">照片</a></div>
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Oil" target="_blank">油量报表</a></div>
+                                                 
+                                                   <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Offline" target="_blank">离线统计</a></div>
+                                                   
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Electric" target="_blank">剩余电量</a></div>
+                                                
+                                                <div class="repnav"><a class="repLis" href="navigation/Report.aspx?id=Temp" target="_blank">温度报表</a></div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="navigation/Settings.aspx" target="_blank">设置</a>
+                    </li>
+                    <li><a href="InstructionsSet.aspx" target="_blank">指令下发</a>
+                    </li>
+                    <li><a href="VideoMonitoring.aspx" target="_blank">3G视频</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="duser" onmouseout="usermove();" onmouseover="userover();" style="height: 25px; cursor: pointer; margin-top: 5px; float: right; width: 30px; margin-right: 5px;">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="../../Images/user.png" style="height: 18px; margin-left: 5px; margin-top: 2px;">
+                        </td>
+                    </tr>
+                </table>
+                <div id="userContext" class="userContext">
+                    <li style="list-style-type: none; height: 25px;" class="timeline">
+                        <a class="repLis" style="margin-left: 20px; margin-top: 5px; float: left" href="navigation/TimeLine1.aspx" target="_blank">成长历程</a>
+
+                    </li>
+
+                    <li style="list-style-type: none; height: 25px;">
+                        <a class="repLis" style="margin-left: 20px; margin-top: 5px; float: left" href="javascript:void(0)" onclick="LogOutClick()">退出</a>
+                        <input type="submit" name="btnExit" value="aaaaaaaaa" id="btnExit" style="display: none;" />
+                    </li>
+
+                </div>
+            </div>
+            <div id="refresh" style="float: right; height: 25px; width: 30px; margin-top: 5px; text-align: center; vertical-align: middle;">
+                <img src="Images/刷新.png" title="资料刷新" style="height: 18px; margin-top: 3px;" />
+            </div>
+            <input id="inputSearch" class="inputSearch" placeholder="单车今日概况">
+            </input>
+        </div>
+
+    </div>
+    
+
+    <div style="overflow: auto; width: 100%; position: relative; height: 1740px; background-color: #f5f5f5;">
+        <div style="margin-top: 65px;"></div>
+
+        <div style="width: 1200px; background-color: white; height: 1620px; margin: 0 auto 0 auto; border: 1px solid #E3E3E3; -moz-box-shadow: 2px 6px 10px #D1D1D1; -webkit-box-shadow: 2px 6px 10px #D1D1D1; box-shadow: 2px 6px 10px #D1D1D1;">
+            <div style="height: 100px; width: 30px; position: absolute; background-color: #4f9cee; margin-left: -30px; margin-top: 50px; border: 1px solid #5D9BDF; border-right: 0px; cursor: pointer;">
+                <img src="Images/综合.png" style="height: 20px; margin-left: 3px; margin-top: 5px; margin-bottom: 5px;" />
+                <div>
+                    <a style="color: white; margin-left: 7px; font-weight: bold;">综</a>
+                    <a style="color: white; margin-left: 7px; margin-top: 2px; font-weight: bold;">合 </a>
+                    <a style="color: white; margin-left: 7px; margin-top: 2px; font-weight: bold;">信</a>
+                    <a style="color: white; margin-left: 7px; margin-top: 2px; font-weight: bold;">息 </a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; margin-left: 20px; height: 490px; width: 95%; border-left: 2px dotted #ccc">
+
+                <div id="btnItemAlarm" style="height: 25px; width: 100%;">
+                    <div id="Remind" class="navRight" onclick="navTo(this)">1</div>
+                    <h1 style="float: left; margin-left: 15px; position: absolute; font-size: 25px; font-weight: bold;">到期及提醒
+                    </h1>
+                    <div style="float: right; height: 13px; margin-left: 60px; border-bottom: 1px solid #ccc; width: 950px;"></div>
+                </div>
+
+                <div id="Div1" style="float: left; min-width: 100%; height: 450px; margin-top: 10px; border-radius: 3px;">
+
+                    <div style="float: left; width: 100px; background-color: #f5f5f5; height: 450px; margin-left: 50px; border: 1px solid #ebebeb">
+
+                        
+                        <div id="btnItemServeTime" class="icoBg" style="height: 90px; float: left; margin: 10px 0px 0px 10px; cursor: pointer;">
+                            <div id="dServeTime" style="float: left; height: 20px; width: 32px; background-color: rgb(250, 85, 0); color: White; margin: 1px 0 0 55px; position: absolute; vertical-align: top; border-radius: 15px; text-align: center; font-size: 12px; line-height: 20px; font-weight: bold; border: 1px white  solid; display: none;">
+                                <span id="txtServeTime"></span>
+                            </div>
+                            <div class="tx">
+                                <img src="../Images/ico/服务到期2.png" height="80px" width="80px" alt="" />
+                            </div>
+                            <span style="text-align: center; margin-left: 5px;">服务到期提醒</span>
+                        </div>
+
+                        
+                        <div id="btnItemAnnual" class="icoBg" style="height: 90px; float: left; margin: 10px 0px 0px 10px; cursor: pointer;">
+                            <div id="dAnnual" style="float: left; height: 20px; width: 32px; background-color: rgb(250, 85, 0); color: White; margin: 1px 0 0 55px; position: absolute; vertical-align: top; border-radius: 15px; text-align: center; font-size: 12px; line-height: 20px; font-weight: bold; border: 1px white  solid; display: none;">
+                                <span id="txtAnnual"></span>
+                            </div>
+                            <div class="tx">
+                                <img src="../Images/ico/年检到期2.png" height="80px" width="80px" />
+                            </div>
+                            <span style="text-align: center; margin-left: 5px;">年检到期提醒</span>
+                        </div>
+                        
+                        <div id="btnItemMileMaintain" class="icoBg" style="height: 90px; float: left; margin: 10px 0px 0px 10px; cursor: pointer;">
+                            <div id="dMileMaintain" style="float: left; height: 20px; width: 32px; background-color: rgb(250, 85, 0); color: White; margin: 1px 0 0 55px; position: absolute; vertical-align: top; border-radius: 15px; text-align: center; font-size: 12px; line-height: 20px; font-weight: bold; border: 1px white  solid; display: none;">
+                                <span id="txtMileMaintain"></span>
+                            </div>
+                            <div class="tx">
+                                <img src="../Images/ico/里程保养2.png" height="80px" width="80px" />
+                            </div>
+                            <span style="text-align: center; margin-left: 5px;">里程保养提醒</span>
+                        </div>
+                        
+                        <div id="btnItemLongTimeOff" class="icoBg" style="height: 90px; float: left; margin: 10px 0px 0px 10px; cursor: pointer;">
+                            <div id="dLongTimeOff" style="float: left; height: 20px; width: 32px; background-color: rgb(250, 85, 0); color: White; margin: 1px 0 0 55px; position: absolute; vertical-align: top; border-radius: 15px; text-align: center; font-size: 12px; line-height: 20px; font-weight: bold; border: 1px white  solid; display: none;">
+                                <span id="txtLongTimeOff"></span>
+                            </div>
+                            <div class="tx">
+                                <img src="../Images/ico/长时间掉线2.png" height="80px" width="80px" />
+                            </div>
+                            <span style="text-align: center;">长时间掉线</span>
+                        </div>
+                    </div>
+
+
+
+
+                    <div style="float: left; width: 900px; height: 450px; margin-left: 20px;">
+                        <div style="width: 100%; height: 25px; background-color:#f5f5f5;border:1px solid #ebebeb">
+                            <label id="tbTitle" style="float: left; margin-left: 5px; margin-top: 3px; color: #444; ">
+                                关于App</label>
+                            
+                        </div>
+                        <img id="tableImg" src="Images/首页table介绍.jpg" alt="" style="margin-left: 1px; margin-top: 0px; position: absolute; z-index: 10" />
+                        <div id="divCover" class="dataTables_Loading" style="position: absolute; background-color: #FFFFFF; z-index: 99; width: 897px; height: 397px; margin-left: 1px; margin-top: 26px; text-align: center; display: none">
+                            <img id="img1" src="../Images/loading.gif" style="margin-top: 50px;" alt="" />
+                            <div><a style="font-weight: bold; color: rgb(22, 21, 20); font-size: 15px;">正在加载...</a></div>
+                        </div>
+                        <div id="divServeTime" style="width: 100%"></div>
+                        <div id="divAnnual" style="width: 100%"></div>
+                        <div id="divLongTimeOff" style="width: 100%"></div>
+                        <div id="divMileMaintain" style="width: 100%"></div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div style="width: 95%; margin-left: 20px; height: 565px; border-left: 2px dotted #ccc">
+
+                <div style="float: left; margin-top: 20px; width: 100%; height: 25px;">
+                    <div id="vehMap" class="navRight" onclick="navTo(this)">2</div>
+                    <h1 style="float: left; position: absolute; margin-left: 15px; font-size: 25px; font-weight: bold;">车辆分布图
+                    </h1>
+                    <div style="float: right; height: 13px; margin-left: 8px; border-bottom: 1px solid #ccc; width: 950px;"></div>
+
+                </div>
+                <div style="min-width: 95%; height: 500px; margin-top: 10px; float: left">
+                    <div id="mapchart" style="min-width: 95%; height: 480px; margin-top: 10px; float: left; margin-left: 100px;">
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div style="width: 95%; margin-left: 20px; height: 505px; border-left: 2px dotted #ccc">
+
+                <div style="float: left; height: 25px; width: 100%;">
+                    <div id="OnlineRate" class="navRight" onclick="navTo(this)">3</div>
+                    <h1 style="float: left; position: absolute; margin-left: 15px; font-size: 25px; font-weight: bold;">车辆使用率 
+                    </h1>
+                    <div style="float: right; height: 13px; margin-left: 8px; border-bottom: 1px solid #ccc; width: 950px;"></div>
+
+                    
+
+                    
+                </div>
+                <div id="barchart" style="width: 98%; height: 480px; margin-top: 10px;">
+                </div>
+                
+            </div>
+        </div>
+        <div style="width: 95%; margin-top: 20px;">
+            <label style="margin-left: 45%; width: 100px;">
+                @copyright 2014</label>
+        </div>
+    </div>
+
+    
+    <div onclick="$('body').animate({scrollTop:0},800);$('html').animate({scrollTop:0},800);" style="width: 28px; position: fixed; vertical-align: middle; text-align: center; background-color: #0074CC; vertical-align: baseline; right: 0; bottom: 10px; z-index: 99; height: 90px; border: 1px solid #ccc; cursor: pointer;">
+        <img src="../Images/backtotop.png" style="margin: 5px 0 0 0;" alt="" />
+        <div style="width: 25px; text-align: center;">
+            <a style="color: White; text-align: center;">回</a>
+            <a style="color: White; text-align: center;">到</a>
+            <a style="color: White; text-align: center;">顶</a>
+            <a style="color: White; text-align: center;">部</a>
+        </div>
+    </div>
+</form>
+</body>
+    
+    <link href="http://www.bdygps.com/Module/artDialog/skins/idialog.css" rel="stylesheet" type="text/css" />
+    
+
+    <link href="http://www.bdygps.com/Module/menu/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.bdygps.com/Module/menu/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://www.bdygps.com/JS/Common.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="http://www.bdygps.com/JS/echarts-plain.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/els.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/jquery.MyFloatingBg.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://www.bdygps.com/Module/yuiTabView/build/fonts/fonts-min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.bdygps.com/Module/yuiTabView/build/datatable/assets/skins/sam/datatable.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.bdygps.com/Module/yuiTabView/build/paginator/assets/skins/sam/paginator.css" />
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/element/element-min.js"></script>
+    
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/paginator/paginator-min.js"></script>
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/datasource/datasource-min.js"></script>
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/dragdrop/dragdrop-min.js"></script>
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/event-delegate/event-delegate-min.js"></script>
+    <script type="text/javascript" src="http://www.bdygps.com/Module/yuiTabView/build/datatable/datatable-min.js"></script>
+
+    <script src="http://www.bdygps.com/Module/artDialog/artDialog.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/gpsGetDataList.js" type="text/javascript"></script>
+    
+    
+
+    <script src="http://www.bdygps.com/JS/gpsGetDataList.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/Common.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/JS/divResize.js" type="text/javascript"></script>
+    <link href="http://www.bdygps.com/Module/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <script src="http://www.bdygps.com/JS/jquery-migrate-1.1.1.js" type="text/javascript"></script>
+    <script src="http://www.bdygps.com/Module/autocomplete/jquery.autocomplete.js" type="text/javascript"></script>
+    
+    <script src="http://www.bdygps.com/JS/asset/js/esl/esl.js"></script>
+    <script src="http://www.bdygps.com/JS/asset/js/codemirror.js"></script>
+    <script src="http://www.bdygps.com/JS/asset/js/javascript.js"></script>
+    <script src="http://www.bdygps.com/JS/placeholder.js"></script>
+    <script src="http://www.bdygps.com/Module/ScrollFix/jQueryScrollFix.js"></script>
+    <link href="http://www.bdygps.com/Module/jb51.net/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <script src="http://www.bdygps.com/Module/jb51.net/asyncbox/AsyncBox.v1.4.js"></script>
+    <link href="http://www.bdygps.com/css/MessageBox.css" rel="stylesheet" />
+    <script src="http://www.bdygps.com/JS/MessageBox.js"></script>
+    <script src="http://www.bdygps.com/JS/browser.js"></script>
+    <!--[if !IE]>
+        <script src="JS/jquery.js"></script>
+     <![endif]-->
+    <script type="text/javascript">
+        var a1;
+        var a2;
+        var tabpanel;
+        var isReload = false;       // 标识是否重新加载
+        var timeout = 30000;        // 默认ajax超时时间为30秒
+        var rate = new Array();
+
+        var vehicleList = new Array();
+        var groupList = new Array();
+        var isCompletedFlex;
+        var isCompletedServeTime;
+        var isCompletedAnnual;
+        var isCompletedLongTimeOff;
+        var isCompletedMileMaintain;
+        var isCompletedAlarm;
+        var isCompletedAlarmListCount;
+        var alarmListCount = new Array();
+        var dataServeTime = new Array();
+        var dataAnnual = new Array();
+        var dataLongTimeOff = new Array();
+        var dataMileMaintain = new Array();
+        var dataAlarm = new Array();
+        var dataOnline = new Array();
+        var strAlarm = "";
+        var tableServerTime;
+        var tableAnnual;
+        var tableLongTimeOff;
+        var tableMileMaintain;
+        var tableAlarm;
+        var chart;
+        var timeout = 30000;        // 默认ajax超时时间为30秒
+        var user;
+
+        var loginPage = "";
+        // 判断数据加载完毕并关闭遮挡效果
+        var loadCompleted = function () {
+
+//            if (window.isCompletedGroup == true && window.isCompletedVehicle == true) {
+//                // 关闭加载动画及遮罩层 
+//                //                // 统计终端比率
+//                var vehicleList = $.parseJSON(localStorage.getItem("vehicleList"));
+//                $.each(vehicleList, function (index, item) {
+//                    var exist = false;
+//                    var type = item.D.toString().toUpperCase();
+
+//                    $.each(rate, function (index1, item1) {
+//                        if (type == item1.type) {
+//                            exist = true;
+//                            item1.count += 1;
+//                        }
+//                    });
+
+//                    if (exist == false) {
+//                        rate.push({ "type": type, "count": 1 });
+//                    }
+//                });
+//                $.each(rate, function (index, item) {
+//                    item.rate = ((item.count / vehicleList.length) * 100).toFixed(2);
+//                });
+//                // 调用子页面方法加载报表
+//                clearInterval(a1);
+//                clearInterval(a2);
+//                $("#divLoading2").remove();
+//                $("#context").css("overflow", "auto");
+//                getalarm();
+//                getOnlineRate();
+//                autocompleteJson(vehicleList);
+//            }
+        }
+        // ajax加载数据回传方法
+        var AlarmListCountCallBack = function (isTimeout, alarmListCount) {
+            isCompletedAlarmListCount = true;
+            //  loadCompleted();
+            if (alarmListCount.length > 0) {
+                if (alarmListCount[0].ServeCount > 0) {
+                    $("#txtServeTime").text(alarmListCount[0].ServeCount);
+                    $("#dServeTime").show();
+                }
+                else {
+                    $("#dServeTime").hide();
+                }
+                if (alarmListCount[0].AnnualCount > 0) {
+                    $("#txtAnnual").text(alarmListCount[0].AnnualCount);
+                    $("#dAnnual").show();
+                }
+                else {
+                    $("#dAnnual").hide();
+                }
+
+                if (alarmListCount[0].LongTOCount > 0) {
+                    $("#txtLongTimeOff").text(alarmListCount[0].LongTOCount);
+                    $("#dLongTimeOff").show();
+                }
+                else {
+                    $("#dLongTimeOff").hide();
+                }
+                if (alarmListCount[0].MileCount > 0) {
+                    $("#txtMileMaintain").text(alarmListCount[0].MileCount);
+                    $("#dMileMaintain").show();
+                }
+                else {
+                    $("#dMileMaintain").hide();
+                }
+            }
+        }
+        var ServeTimeCallBack = function (isTimeout, dataList) {
+            dataServeTime = dataList;
+            //tableServerTime.fnClearTable();
+            var count = tableServerTime._oRecordSet.getRecords().length;
+            if (count > 0) {
+                tableServerTime.deleteRows(0, count);
+            }
+            if (dataServeTime.length > 0) {
+                tableServerTime.addRows(dataServeTime, 0);
+                $(".yui-skin-sam .yui-dt-scrollable .yui-dt-data tr.yui-dt-last td").css("border-bottom", "none");
+                $(".yui-dt-liner").css("white-space", "nowrap");
+            }
+            $("#divCover").hide();
+            //$("#divServeTime .dataTables_Loading").remove();
+
+
+            resizeTable();
+        }
+        var AnnualCallBack = function (isTimeout, dataList) {
+            dataAnnual = dataList;
+            var count = tableAnnual._oRecordSet.getRecords().length;
+            if (count > 0) {
+                tableAnnual.deleteRows(0, count);
+            }
+            var count = tableAnnual
+            if (dataAnnual.length > 0) {
+                tableAnnual.addRows(dataAnnual, 0);
+                $(".yui-skin-sam .yui-dt-scrollable .yui-dt-data tr.yui-dt-last td").css("border-bottom", "none");
+                $(".yui-dt-liner").css("white-space", "nowrap");
+            }
+            $("#divCover").hide();
+            //$("#divAnnual .dataTables_Loading").remove();
+            resizeTable();
+        }
+        var MileMaintainCallBack = function (isTimeout, dataList) {
+
+            dataMileMaintain = dataList;
+            var count = tableMileMaintain._oRecordSet.getRecords().length;
+            if (count > 0) {
+                tableMileMaintain.deleteRows(0, count);
+            }
+            if (dataMileMaintain.length > 0) {
+                tableMileMaintain.addRows(dataMileMaintain, 0);
+                $(".yui-skin-sam .yui-dt-scrollable .yui-dt-data tr.yui-dt-last td").css("border-bottom", "none");
+                $(".yui-dt-liner").css("white-space", "nowrap");
+            }
+            $("#divCover").hide();
+            //$("#divMileMaintain .dataTables_Loading").remove();
+            resizeTable();
+        }
+        var LongTimeOffCallBack = function (isTimeout, dataList) {
+            dataLongTimeOff = dataList;
+            var count = tableLongTimeOff._oRecordSet.getRecords().length;
+            if (count > 0) {
+                tableLongTimeOff.deleteRows(0, count);
+            }
+            var coun
+            //tableLongTimeOff.fnClearTable();
+            if (dataLongTimeOff.length > 0) {
+                tableLongTimeOff.addRows(dataLongTimeOff, 0);
+                $(".yui-skin-sam .yui-dt-scrollable .yui-dt-data tr.yui-dt-last td").css("border-bottom", "none");
+                $(".yui-dt-liner").css("white-space", "nowrap");
+            }
+
+            //$("#divLongTimeOff .dataTables_Loading").remove();
+            $("#divCover").hide();
+            resizeTable();
+        }
+        //每次清空table 
+        function clearTable() {
+            var count = tableLongTimeOff._oRecordSet.getRecords().length;
+            if (count > 0) {
+                tableLongTimeOff.deleteRows(0, count);
+            }
+            var count1 = tableMileMaintain._oRecordSet.getRecords().length;
+            if (count1 > 0) {
+                tableMileMaintain.deleteRows(0, count1);
+            }
+            var count2 = tableAnnual._oRecordSet.getRecords().length;
+            if (count2 > 0) {
+                tableAnnual.deleteRows(0, count2);
+            }
+            var count3 = tableServerTime._oRecordSet.getRecords().length;
+            if (count3 > 0) {
+                tableServerTime.deleteRows(0, count3);
+            }
+        }
+        function getalarm() {
+
+            //var user = $.parseJSON($.cookie("User"));
+
+            var url = "/v1/VehWarn?";
+            url += "&uid=" + user.Uid;
+            url += "&token=" + user.Token;
+//            getData(url, alarmListCount, 0, timeout, AlarmListCountCallBack);
+
+        }
+
+        //获取地图上的车辆数据
+        function getMapData() {
+            //var user = $.parseJSON(localStorage.getItem("User"));
+//            var url = "/v1/VehLocation?";
+//            url += "&uid=" + user.Uid;
+//            url += "&token=" + user.Token;
+//            getData(url, alarmListCount, 0, timeout, LocationCallBack);
+        }
+        //获取在线率
+        function getOnlineRate() {
+            barChart = echarts.init(document.getElementById('barchart'));
+            barChart.showLoading({
+                text: "数据加载中...",
+                effect: "whirling",
+                textStyle: {
+                    fontSize: 20
+                }
+            });
+
+            //火狐不兼容问题（界面变形）
+            $("#barchart div").css("position", "absolute");
+            var myDate = new Date();
+            var eDate = myDate.getFullYear() + "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate()
+            var d = new Date();
+            d.setTime(d.getTime() - 24 * 60 * 60 * 1000 * 6);
+            var s = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+
+            var url = "/v1/RPOnlineRate?";
+            url += "&uid=" + user.Uid;
+            url += "&token=" + user.Token;
+            url += "&from=" + s;
+            url += "&to=" + eDate;
+//            getData(url, alarmListCount, 0, timeout, OnlineRateCallBack);
+        }
+        //获取运行状况
+        function getRunState() {
+            var date = new Date();
+            var today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+            //var user = $.parseJSON(localStorage.getItem("User"));
+            var url = "/v1/RunState?";
+            url += "&uid=" + user.Uid;
+            url += "&token=" + user.Token;
+            url += "&date=" + today;
+//            getData(url, alarmListCount, 0, timeout, runStateCallBack);
+        }
+        //位置数据获取后回调
+        function LocationCallBack(istimeout, dataList) {
+            if (dataList.length == 0) {  // 没有数据时清理数据
+                //MessageBox("没有数据", '提示');
+                myChart2.hideLoading();
+                loadMap([], [], []);
+                return;
+            }
+            else if (dataList.length == 1 && dataList[0].ErrorCode != undefined && dataList[0].ErrorCode != null) {  // 没有数据时清理数据
+               // MessageBox(dataList[0].Detail, '提示');
+                myChart2.hideLoading();
+                return;
+            }
+            else {
+                //var dat   a = eval(dataList);
+                var Mapdata = new Array();
+                var rightData = new Array();
+                var otherValue = 0;
+                for (var i = 0; i < dataList.length; i++) {
+                    var obj = new Object();
+                    if (dataList[i].Province.indexOf("新疆") >= 0) { obj.name = "新疆"; }
+                    else if (dataList[i].Province.indexOf("西藏") >= 0) { obj.name = "西藏"; }
+                    else if (dataList[i].Province.indexOf("内蒙古") >= 0) { obj.name = "内蒙古"; }
+                    else if (dataList[i].Province.indexOf("广西") >= 0) { obj.name = "广西"; }
+                    else if (dataList[i].Province.indexOf("宁夏") >= 0) { obj.name = "宁夏"; }
+                    else {
+                        obj.name = dataList[i].Province.replace("省", "").replace("市", "");
+                    }
+                    obj.value = Math.round(dataList[i].Count);
+                    Mapdata.push(obj);
+                    //data += "{ name:'" + dataList[i].Province.replace("省", "").replace("自治区", "").replace("壮族", "") + "',value:" + Math.round(dataList[i].Count) + "},"
+                }
+                //如果大于二十个省，则将数据从大到小排列，排名小于20的省合并为其他
+                if (Mapdata.length > 10) {
+                    var newData = new Array();//重新排序后的data
+                    var count = Mapdata.length;
+                    while (count > 0) {
+                        var maxData = 0;
+                        var index = 0;
+                        var obj = Mapdata[0];
+                        //每次循环找到最大的值，插入新数组，然后删除最大的项。
+                        for (var i = 0; i < Mapdata.length; i++) {
+                            if (maxData < Mapdata[i].value) {//如果最大值比当前值小，则将当前项记为最大项
+                                maxData = Mapdata[i].value;
+                                index = i;
+                                obj = Mapdata[i];
+                            }
+                        }
+                        newData.push(obj);//新数组中插入最大项
+                        Mapdata.splice(index, 1);//删除原数组中的最大项
+                        count--;
+                    }
+                    //直到数组中数据全部清空，则排序完毕，
+                    Mapdata = newData;//将排序好的数据重新插入数组
+                    //新得的数组取前二十项插入右边数组，后面剩下的项合并为其他
+                    var otherData = 0;
+                    for (var i = 0; i < Mapdata.length; i++) {
+                        if (i < 10) {
+                            rightData.push(Mapdata[i]);
+                        }
+                        else {
+                            otherData += Mapdata[i].value;
+                        }
+                    }
+                    if (otherData != 0) {//如果存在其他数据
+                        var obj = new Object();
+                        obj.name = "其他";
+                        obj.value = otherData;
+                        rightData.push(obj);
+
+                    }
+                }
+                else {
+                    rightData = Mapdata;
+                }
+                loadMap(dataList, Mapdata, rightData);
+            }
+        }
+        //加载地图数据
+        var barChart;
+        //加载在线率图表
+        function loadOnlineRate(timeArr, data, sumData) {
+
+            option2 = {
+                tooltip: {
+                    trigger: 'axis',
+                    //formatter: "{a} <br/>{b}<br/> 在线{c}<br/>离线 {d}"
+                    //formatter: function (a, b, c) {
+
+                    //}
+                },
+                //dataZoom: {
+                //    show: true,
+                //    realtime: true,
+                //    start: 0,
+                //    end: 100
+                //},
+                color: [
+
+                    "#6495ED",
+                     "#cccccc"
+
+                ],
+                normal: {
+                    itemStyle: {
+                        color: '#000'
+                    }
+                },
+                xAxis: [
+                     {
+
+                         type: 'category',
+                         data: timeArr
+                     }
+                ],
+                calculable: true,
+                yAxis: [
+                    {
+                        splitArea: { show: true },
+                        position: "right",
+                        type: 'value'
+                    }
+                ],
+                series: [{
+                    name: '使用车辆',
+                    type: 'bar',
+                    barGap: "50%",
+                    stack: 'sum',
+                    barCategoryGap: "70%",
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true, position: 'insideTop',
+                                formatter: function (a, b, c) {
+                                    var count = parseInt(c);//车辆数
+                                    var total = $.parseJSON(localStorage.getItem("vehicleList")).length;
+                                    return (count / total * 100).toFixed(1) + "%";
+                                }
+                            }
+                        }
+                    },
+                    data: data
+                },
+                {
+                    name: '未使用车辆',
+                    type: 'bar',
+                    stack: 'sum',
+                    //itemStyle: {
+                    //    normal: {
+                    //        label: {
+                    //            show: true, position: 'insideTop',
+                    //            textStyle: {
+                    //                color: 'black'
+                    //            }
+                    //        }
+                    //    }
+                    //},
+                    data: sumData
+
+                }]
+            }
+
+            barChart.hideLoading();
+            barChart.setOption(option2, true);
+        }
+        //加载地图图表
+        function loadMap(datalist, Mapdata, rightData) {
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{b} : {c}"
+                },
+                dataRange: {
+                    x: -10,
+                    y: -500,
+                    min: 0,
+                    max: 2000,
+                    color: ['orangered', 'yellow', 'lightskyblue']
+                },
+                series: [
+                    {
+                        name: '中国',
+                        type: 'map',
+                        mapType: 'china',
+                        selectedMode: 'single',
+                        mapLocation: {
+                            x: 'left'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{b} : {c}"
+                        },
+                        itemStyle: {
+                            normal: { label: { show: true } },
+                            emphasis: { label: { show: true } }
+                        },
+                        data: Mapdata
+                        //data: [
+                        //    { name: '广东', value: Math.round(500), selected: false },
+                        //    { name: '河北省', value: Math.round(100), selected: false }
+                        //]
+                    },
+                    {
+                        name: '车辆分布比',
+                        type: 'pie',
+                        //roseType: 'radius',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        center: [document.getElementById('mapchart').offsetWidth - 250, 320],
+                        radius: [30, 120],
+                        data: rightData
+                    }
+                ]
+            }
+            myChart2.hideLoading();
+            myChart2.setOption(option, true);
+            var ecConfig = require('echarts/config');
+            myChart2.on(ecConfig.EVENT.MAP_SELECTED, function (param) {
+
+                option = myChart2.getOption();
+                var mapType = [
+                  '中国',
+                    // 23个省
+                  '广东', '青海', '四川', '海南', '陕西',
+                  '甘肃', '云南', '湖南', '湖北', '黑龙江',
+                  '贵州', '山东', '江西', '河南', '河北',
+                  '山西', '安徽', '福建', '浙江', '江苏',
+                  '吉林', '辽宁', '台湾',
+                    // 5个自治区
+                  '新疆', '广西', '宁夏', '内蒙古', '西藏',
+                    // 4个直辖市
+                  '北京', '天津', '上海', '重庆',
+                    // 2个特别行政区
+                  '香港', '澳门'
+                ];
+                var selected = param.selected;
+                var selectedProvince;
+                var name;
+                var selectData = new Array();
+                for (var i = 0, l = option.series[0].data.length; i < l; i++) {
+                    name = option.series[0].data[i].name;
+                    option.series[0].data[i].selected = selected[name];
+                    if (selected[name]) {
+                        selectedProvince = name;
+                    }
+                }
+                for (var i = 0; i < datalist.length; i++) {
+                    if (datalist[i].Province.indexOf(selectedProvince) >= 0) {
+                        for (var j = 0; j < datalist[i].CityList.length; j++) {
+                            var obj = new Object();
+                            obj.name = datalist[i].CityList[j].City;
+                            obj.value = datalist[i].CityList[j].Count;
+                            selectData.push(obj);
+
+                        }
+
+                    }
+                }
+                if (typeof selectedProvince == 'undefined' || mapType.indexOf(selectedProvince) < 0) {
+                    option.series = [{
+                        name: '中国',
+                        type: 'map',
+                        mapType: 'china',
+                        selectedMode: 'single',
+                        mapLocation: {
+                            x: 'left'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{b} : {c}"
+                        },
+                        itemStyle: {
+                            normal: { label: { show: true } },
+                            emphasis: { label: { show: true } }
+                        },
+                        data: Mapdata
+                        //data: [
+                        //    { name: '广东', value: Math.round(500), selected: false }, 
+                        //    { name: '河北', value: Math.round(500), selected: false }
+                        //]
+                    },
+                    {
+                        name: '车辆分布比',
+                        type: 'pie',
+                        //roseType: 'area',
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        center: [document.getElementById('mapchart').offsetWidth - 250, 320],
+                        radius: [30, 100],
+                        data: rightData
+                    }
+                    ]
+                    //  option.series.splice(1);
+                    myChart2.setOption(option, true);
+                    return;
+                }
+
+                option.series[0] = {
+                    name: selectedProvince,
+                    type: 'map',
+                    mapType: selectedProvince,
+                    selectedMode: 'single',
+                    mapLocation: {
+                        x: 'left'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{b} : {c}"
+                    },
+                    itemStyle: {
+                        normal: { label: { show: true } },
+                        emphasis: { label: { show: true } }
+                    },
+                    data: selectData
+                    //data: [
+                    //    { name: '深圳市', value: Math.round(500), selected: true }
+                    //]
+                }
+                option.series[1] =
+                  {
+                      name: '车辆分布比',
+                      type: 'pie',
+                      //roseType: 'area',
+                      tooltip: {
+                          trigger: 'item',
+                          formatter: "{a} <br/>{b} : {c} ({d}%)"
+                      },
+                      center: [document.getElementById('mapchart').offsetWidth - 250, 320],
+                      radius: [30, 120],
+                      data: selectData
+                  }
+
+                //option.series.splice(1);
+                myChart2.setOption(option, true);
+
+            });
+        }
+        var myChart2;
+        function initMap() {
+            require.config({
+                paths: {
+                    echarts: './js/echarts',
+                    'echarts/chart/map': './js/echarts-map'
+                }
+            });
+
+            require(
+                [
+                    'echarts',
+                    'echarts/chart/map'
+                ],
+                function (ec) {
+                    // --- 地图 ---
+                    myChart2 = ec.init(document.getElementById('mapchart'));
+                    myChart2.showLoading({
+                        text: "数据加载中...",
+                        effect: "whirling",
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    });
+                    getMapData();
+                }
+            );
+
+        }
+
+        // 加载类型比例报表
+        function loadTypeRate() {
+            var seriesData = new Array();
+            $.each(window.parent.rate, function (index, item) {
+                var seriesDataItem = new Array();
+                seriesDataItem.push(item.type);
+                seriesDataItem.push(parseFloat(item.rate));
+                seriesData.push(seriesDataItem);
+            });
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                credits: {
+                    enabled: false        // 屏蔽官网链接
+                },
+                title: {
+                    text: "类型比例图"
+                },
+                tooltip: {
+                    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+                    lable: {
+                        enabled: false
+                    }
+                },
+                legend: {
+                    enabled: true
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: "pointer",
+                        dataLabels: {
+                            enabled: false,
+                            color: "#000000",
+                            connectorColor: "#000000",
+                            format: "<b>{point.name}</b>: {point.percentage:.1f} %"
+                        },
+                        showInLegend: true
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            contextButtonTitle: "",
+                            symbol: null,    // 设置导出按钮样式
+                            onclick: function () {   // 导出按钮点击事件，这里需要服务端处理，后期尝试处理为鼠标滑过显示略缩图，点击下载
+                                this.exportChart();
+                            },
+                            text: "导出图片"
+                        }
+                    }
+                },
+                series: [{
+                    type: "pie",
+                    name: "百分比",
+                    data: seriesData
+                }]
+            });
+        }
+        //在线率数据获取后回调
+        function OnlineRateCallBack(istimeout, datalist) {
+            if (datalist.length == 1 && datalist[0].ErrorCode != undefined && datalist[0].ErrorCode != null) {  // 没有数据时清理数据
+                //MessageBox(datalist[0].Detail, '提示');
+                barChart.hideLoading();
+                return;
+            }
+            else {
+                var data = new Array();
+                var timeArr = new Array();
+                var sumData = new Array();
+                for (var i = 0; i < 7 - datalist.length; i++) {
+                    if (datalist.length > 0) {
+                        var arr = datalist[datalist.length - 1].Date.split("-");
+                        var date = new Date(arr[0], arr[1] - 1, arr[2]);
+                        var aheadDays = 7 - i - 1;
+
+                        var d = dateAdd(-aheadDays, date);
+                        data.push(0);
+                        sumData.push(datalist[0].Sum - 0);
+                        timeArr.push(d);
+                    }
+                    else {
+                        var date = new Date();
+                        var aheadDays = 7 - i - 1;
+                        var d = dateAdd(-aheadDays, date);
+                        data.push(0);
+                        sumData.push(0);
+                        timeArr.push(d);
+                    }
+                }
+                for (var i = 0; i < datalist.length; i++) {
+                    data.push(datalist[i].Value);
+                    sumData.push(datalist[i].Sum - datalist[i].Value);
+                    timeArr.push(datalist[i].Date);
+                }
+                loadOnlineRate(timeArr, data, sumData);
+            }
+        }
+        //今日运行状况数据获取后回调
+        function runStateCallBack(istimeout, datalist) {
+            if (datalist.length == 0) {  // 没有数据时清理数据
+                //MessageBox("没有数据", '提示');
+                myChart3.hideLoading();
+                return;
+            }
+            else if (datalist.length == 1 && datalist[0].ErrorCode != undefined && datalist[0].ErrorCode != null) {  // 没有数据时清理数据
+                //MessageBox(datalist[0].Detail, '提示');
+                myChart3.hideLoading();
+                return;
+            }
+            else {
+                var mileData = new Array();//里程数据
+                var timeData = new Array();//时间数据
+                var runStateData = new Array();//工作时长数据
+                var dateData = new Array();//日期数据
+                var workHour = 0;//所有工作时长
+                var maxMile = 0;
+                var maxTime = 0;
+                var vehCount = $.parseJSON(localStorage.getItem("vehicleList")).length;//获取所有车辆数
+                for (var i = 0; i < datalist.length; i++) {
+                    if (maxMile == 0) {
+                        maxMile = datalist[i].RunMileage;
+                    }
+                    else {
+                        if (maxMile < datalist[i].RunMileage) {
+                            maxMile = datalist[i].RunMileage;
+                        }
+                    }
+                    if (maxTime == 0) {
+                        maxTime = datalist[i].WorkHour;
+                    }
+                    else {
+                        if (maxTime < datalist[i].WorkHour) {
+                            maxTime = datalist[i].WorkHour;
+                        }
+                    }
+                    mileData.push(datalist[i].RunMileage);
+                    timeData.push(datalist[i].WorkHour);
+                    dateData.push(datalist[i].Date.split(" ")[0]);
+                    workHour += datalist[i].WorkHour;
+                }
+                var obj = new Object();
+                obj.value = workHour;
+                obj.name = "运行";
+                runStateData.push(obj);
+                obj = new Object();
+                obj.value = 7 * 24 * vehCount - workHour;
+                obj.name = "停运";
+                runStateData.push(obj);
+                loadShiyonglv(mileData, timeData, runStateData, dateData, maxTime * 1.7, maxMile * 1.7);
+            }
+        }
+
+        var getGroupList = function (isTimeout, groupList) {
+            if (isTimeout == true) {
+                //MessageBox("网络超时，数据未加载完整", '提示');
+            }
+            if (groupList.length == 0) {  // 没有数据时清理数据
+                //MessageBox("没有数据", '提示');
+                asyncbox.alert("没有车组数据，自动跳转后台管理", "提示", function (action) {
+                    if (action == "ok") {
+                        window.location.href = "VehicleMgr/Login.aspx";
+                    }
+                });
+                return;
+            }
+            else if (groupList.length == 1 && groupList[0].ErrorCode != undefined && groupList[0].ErrorCode != null) {  // 没有数据时清理数据
+                //MessageBox(groupList[0].Detail, '提示');
+                return;
+            }
+            else {
+                localStorage.setItem("groupList", JSON.stringify(groupList));
+                window.isCompletedGroup = true;
+                loadCompleted(); // 判断是否加载完成
+            }
+        }
+        var getVehicleList = function (isTimeout, vehicleList) {
+            if (isTimeout == true) {
+                //MessageBox("网络超时，数据未加载完整", '提示');
+            }
+            if (vehicleList.length == 0) {  // 没有数据时清理数据
+                asyncbox.alert("没有车辆数据，自动跳转后台管理", "提示", function (action) {
+                    if (action == "ok") {
+                        window.location.href = "VehicleMgr/Login.aspx";
+                    }
+                });
+
+
+
+                //MessageBox("没有数据", '提示');
+                return;
+            }
+            else if (vehicleList.length == 1 && vehicleList[0].ErrorCode != undefined && vehicleList[0].ErrorCode != null) {  // 没有数据时清理数据
+                //MessageBox(vehicleList[0].Detail, '提示');
+                return;
+            }
+            else {
+                localStorage.setItem("vehicleList", JSON.stringify(vehicleList));
+                window.isCompletedVehicle = true;
+                loadCompleted(); // 判断是否加载完成
+            }
+        }
+
+
+
+        $(function () {
+
+
+
+            //$(".welcome").html(JSON.parse(localStorage.getItem("LogoSet")).welcome);
+
+
+
+
+            //id="NavReport" id="VehMap" id="TableRemaind"
+            loginPage = "Login.aspx";
+             //loadMap();
+             //页面resize的时候
+
+             //数组indexOf
+             if (!Array.prototype.indexOf) {
+                 Array.prototype.indexOf = function (elt /*, from*/) {
+                     var len = this.length >>> 0;
+                     var from = Number(arguments[1]) || 0;
+                     from = (from < 0)
+                          ? Math.ceil(from)
+                          : Math.floor(from);
+                     if (from < 0)
+                         from += len;
+                     for (; from < len; from++) {
+                         if (from in this &&
+                             this[from] === elt)
+                             return from;
+                     }
+                     return -1;
+                 };
+             }
+
+             //$("#inputSearch").placeholder();
+
+             //加载界面  
+             //$("#divLoading").MyFloatingBg({ direction: 0, speed: 50 });
+
+             // 读取当前用户  并判断是否重新加载数据
+//             user = $.parseJSON($.cookie("User"));
+//             if (user == undefined || user == null) {
+//                 window.location = "Login.aspx";
+//             }
+
+            // 权限控制
+//            var funcIDArr = user.FuncID.split(",");
+//            if (user.Uid != "0" && user.Uid != 1){
+//                $.each($("#mn li"), function (i1, item1) {
+//                    if ($($(item1).children("a")[0]).text() != "首页" && $($(item1).children("a")[0]).text() != "监控中心" && funcIDArr.indexOf($($(item1).children("a")[0]).text()) == -1 && $($(item1).children("a")[0]).text() != "3G视频") {
+//                        $(item1).remove();
+//                    }
+//                });
+//            }
+//            if (user.timeline) {
+                $(".userContext").css("height", "55px");
+                $(".timeline").show();
+//            }
+//            else {
+//                $(".userContext").css("height", "30px");
+//                $(".timeline").hide();
+//            }
+
+
+            if (window.Browser.name == "msie" && window.Browser.version == "8.0") {
+                $("#inputSearch").height(20);
+                $("#inputSearch").css("margin-top", "5px");
+                $("#inputSearch").css("padding-top", "3px");
+                $("#inputSearch").css("line-height", "18px");
+            }
+            $(window).resize(function () {
+            });
+
+             // 保存当前用户
+//             if (localStorage.getItem("User") != "undefined" && localStorage.getItem("User") != undefined && $.parseJSON(localStorage.getItem("User")) != null && user.Uid == $.parseJSON(localStorage.getItem("User")).Uid && localStorage.getItem("groupList") != null && localStorage.getItem("vehicleList") != null) {
+//                 localStorage.setItem("User", $.cookie("User"));
+//                 if (isReload == true) {
+//                     // 加载车组
+//                     var url = "/v1/VehGroup?token=" + user.Token;
+//                     url += "&uid=" + user.Uid;
+//                     getData(url, groupList, 0, timeout, getGroupList);
+
+//                     // 分批加载车辆列表，加载完毕为止
+//                     localStorage.removeItem("vehicleList"); // 初始化车辆列表
+
+//                     url = "/v1/Vehicle?uid=" + user.Uid + "&token=" + user.Token;
+//                     getDataForIndex(url, vehicleList, 0, 0, timeout, getVehicleList);
+//                 }
+//                 else {
+//                     window.isCompletedGroup = true;
+//                     window.isCompletedVehicle = true;
+//                     loadCompleted(); // 判断是否加载完成
+//                 }
+//             }
+//             else {
+//                 localStorage.setItem("User", $.cookie("User"));
+//                 // 加载车组
+//                 var url = "/v1/VehGroup?token=" + user.Token;
+//                 url += "&uid=" + user.Uid;
+//                 getData(url, groupList, 0, timeout, getGroupList);
+
+//                 // 分批加载车辆列表，加载完毕为止
+//                 localStorage.removeItem("vehicleList"); // 初始化车辆列表
+
+//                 url = "/v1/Vehicle?uid=" + user.Uid + "&token=" + user.Token;
+//                 getDataForIndex(url, vehicleList, 0, 0, timeout, getVehicleList);
+//             }
+             
+             initMap();
+//             $("#btnUser").text(user.UserName);
+//             $("#txtLastLoginTime").text(user.LRTime);
+
+             $("#btnItemServeTime").click(function () {
+                 $("[id^=div]").each(function () {
+                     if ($(this).css("display") == "block") {
+                         $(this).hide();
+                     }
+                 });
+                 clearTable();
+                 $("#tableImg").hide();
+                 $("#tbTitle").text("服务到期提醒");
+                 //var count = tableServerTime._oRecordSet.getRecords().length;
+                 //if (count > 0) {
+                 //    tableServerTime.deleteRows(0, count);
+                 //}
+                 $("#divServeTime").show();
+                 //var divLoading = '';
+                 //$("#divServeTime").append(divLoading);
+                 $("#divCover").show();
+                 url = "/v1/VehWarn?";
+                 url += "&uid=" + user.Uid;
+                 url += "&type=ServeTime"; // 服务到期
+                 url += "&token=" + user.Token;
+//                 getDataForIndex(url, dataServeTime, 0, 0, timeout, ServeTimeCallBack);
+             });
+
+             $("#btnItemAnnual").click(function () {
+                 $("[id^=div]").each(function () {
+                     if ($(this).css("display") == "block") {
+                         $(this).hide();
+                     }
+                 });
+                 clearTable();
+                 $("#tableImg").hide();
+                 $("#tbTitle").text("年检到期提醒");
+                 $("#divAnnual").show();
+                 //var divLoading = '<div class="dataTables_Loading" style="background-color:#FFFFFF;position:absolute; z-index:99; top:35px; left:0px; overflow: auto; height: 243px; width: 100%; text-align:center;" ><img id="imgLoading" src="../Images/loading.gif"  style=" margin-top:50px;" alt="" /><div><a style="font-weight:bold; color:rgb(22, 21, 20); font-size:15px;">正在加载...</a></div></div>';
+                 //$("#divAnnual .dataTables_scroll").append(divLoading);
+                 $("#divCover").show();
+                 url = "/v1/VehWarn?";
+                 url += "&uid=" + user.Uid;
+                 url += "&type=Annual"; // 年检提醒
+                 url += "&token=" + user.Token;
+//                 getDataForIndex(url, dataAnnual, 0, 0, timeout, AnnualCallBack);
+             });
+
+             $("#btnItemMileMaintain").click(function () {
+                 $("[id^=div]").each(function () {
+                     if ($(this).css("display") == "block") {
+                         $(this).hide();
+                     }
+                 });
+                 clearTable();
+                 $("#tableImg").hide();
+                 $("#tbTitle").text("里程保养提醒");
+                 $("#divMileMaintain").show();
+                 //var divLoading = '<div class="dataTables_Loading" style="background-color:#FFFFFF;position:absolute; z-index:99; top:35px; left:0px; overflow: auto; height: 243px; width: 100%; text-align:center;" ><img id="imgLoading" src="../Images/loading.gif"  style=" margin-top:50px;" alt="" /><div><a style="font-weight:bold; color:rgb(22, 21, 20); font-size:15px;">正在加载...</a></div></div>';
+                 //$("#divMileMaintain .dataTables_scroll").append(divLoading);
+                 $("#divCover").show();
+                 url = "/v1/VehWarn?";
+                 url += "&uid=" + user.Uid;
+                 url += "&type=MileMaintain"; // 里程保养
+                 url += "&token=" + user.Token;
+//                 getDataForIndex(url, dataMileMaintain, 0, 0, timeout, MileMaintainCallBack);
+             });
+
+             $("#btnItemLongTimeOff").click(function () {
+                 $("[id^=div]").each(function () {
+                     if ($(this).css("display") == "block") {
+                         $(this).hide();
+                     }
+                 });
+                 clearTable();
+                 $("#tableImg").hide();
+                 $("#tbTitle").text("长时间掉线提醒");
+                 $("#divLongTimeOff").show();
+                 $("#divCover").show();
+                 url = "/v1/VehWarn?";
+                 url += "&uid=" + user.Uid;
+                 url += "&type=LongTimeOff"; // 长时间下线
+                 url += "&token=" + user.Token;
+//                 getDataForIndex(url, dataLongTimeOff, 0, 0, timeout, LongTimeOffCallBack);
+             });
+
+             var initServerTimeTable = function () {
+                 var myColumnDefs = [
+                     { key: "VehgroupName", label: "车组", width: 180, resizeable: true },
+                     { key: "VehNo", label: "车牌号码", width: 180, resizeable: true },
+                     { key: "Lastvalue", label: "服务开始时间", width: 180, resizeable: true },
+                     { key: "Thisvalue", label: "服务到期时间", width: 180, resizeable: true },
+                     { key: "RangeValue", label: "剩余天数", width: 173, resizeable: true }
+
+                 ];
+
+                 var myDataSource = new YAHOO.util.DataSource([]);
+                 myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;;
+
+                 tableServerTime = new YAHOO.widget.ScrollingDataTable("divServeTime",
+                         myColumnDefs, myDataSource, { height: "400px", MSG_ERROR: "无数据" });
+                 //鼠标移动到行上 高亮显示  显示车辆信息
+                 tableServerTime.subscribe("rowMouseoverEvent", tableServerTime.onEventHighlightRow);
+
+                 //鼠标移出行 取消高亮 隐藏车辆信息
+                 tableServerTime.subscribe("rowMouseoutEvent", tableServerTime.onEventUnhighlightRow);
+
+                 return {
+                     ds: myDataSource,
+                     dt: tableServerTime,
+                     oDTRowHighlight: tableServerTime
+                 };
+             }();
+
+             var inittableAnnual = function () {
+                 var myColumnDefs = [
+                     { key: "VehgroupName", label: "车组", width: 180, resizeable: true },
+                     { key: "VehNo", label: "车牌号码", width: 180, resizeable: true },
+                     { key: "Lastvalue", label: "上次年检时间", width: 180, resizeable: true },
+                     { key: "Thisvalue", label: "本次年检时间", width: 180, resizeable: true },
+                     { key: "RangeValue", label: "剩余天数", width: 173, resizeable: true }
+
+                 ];
+
+                 var myDataSource = new YAHOO.util.DataSource([]);
+                 myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;;
+
+                 tableAnnual = new YAHOO.widget.ScrollingDataTable("divAnnual",
+                         myColumnDefs, myDataSource, { width: "100%", height: "400px", MSG_ERROR: "无数据" });
+                 //鼠标移动到行上 高亮显示  显示车辆信息
+                 tableAnnual.subscribe("rowMouseoverEvent", tableAnnual.onEventHighlightRow);
+
+                 //鼠标移出行 取消高亮 隐藏车辆信息
+                 tableAnnual.subscribe("rowMouseoutEvent", tableAnnual.onEventUnhighlightRow);
+
+                 return {
+                     ds: myDataSource,
+                     dt: tableAnnual,
+                     oDTRowHighlight: tableAnnual
+                 };
+             }();
+
+             var initLongTimeOff = function () {
+                 var myColumnDefs = [
+                     { key: "VehgroupName", label: "车组", width: 180, resizeable: true },
+                     { key: "VehNo", label: "车牌号码", width: 180, resizeable: true },
+                     { key: "Lastvalue", label: "最后在线时间", width: 180, resizeable: true },
+                     { key: "Thisvalue", label: "掉线阀值(天)", width: 180, resizeable: true },
+                     { key: "RangeValue", label: "掉线天数(天)", width: 173, resizeable: true }
+
+                 ];
+
+                 var myDataSource = new YAHOO.util.DataSource([]);
+                 myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;;
+
+                 tableLongTimeOff = new YAHOO.widget.ScrollingDataTable("divLongTimeOff",
+                         myColumnDefs, myDataSource, { width: "100%", height: "400px", MSG_ERROR: "无数据" });
+                 //鼠标移动到行上 高亮显示  显示车辆信息
+                 tableLongTimeOff.subscribe("rowMouseoverEvent", tableLongTimeOff.onEventHighlightRow);
+                 //鼠标移出行 取消高亮 隐藏车辆信息
+                 tableLongTimeOff.subscribe("rowMouseoutEvent", tableLongTimeOff.onEventUnhighlightRow);
+
+                 return {
+                     ds: myDataSource,
+                     dt: tableLongTimeOff,
+                     oDTRowHighlight: tableLongTimeOff
+                 };
+             }();
+
+             var inittableMileMaintain = function () {
+                 var myColumnDefs = [
+                     { key: "VehgroupName", label: "车组", width: 120, resizeable: true },
+                     { key: "VehNo", label: "车牌号码", width: 100, resizeable: true },
+                     { key: "MaintainTime", label: "时间", width: 140, resizeable: true },
+                     { key: "Mileage", label: "当前里程(公里)", width: 120, resizeable: true },
+                     { key: "Rangemile", label: "剩余保养里程(公里)", width: 150, resizeable: true },
+                     { key: "MaintainMile", label: "下次保养里程(公里)", width: 150, resizeable: true },
+                     { key: "RangeTime", label: "剩余天数", width: 100, resizeable: true }
+                 ];
+
+                 var myDataSource = new YAHOO.util.DataSource([]);
+                 myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;;
+
+                 tableMileMaintain = new YAHOO.widget.ScrollingDataTable("divMileMaintain",
+                         myColumnDefs, myDataSource, { width: "100%", height: "400px", MSG_ERROR: "无数据" });
+                 //鼠标移动到行上 高亮显示  显示车辆信息
+                 tableMileMaintain.subscribe("rowMouseoverEvent", tableMileMaintain.onEventHighlightRow);
+
+                 //鼠标移出行 取消高亮 隐藏车辆信息
+                 tableMileMaintain.subscribe("rowMouseoutEvent", tableMileMaintain.onEventUnhighlightRow);
+
+                 return {
+                     ds: myDataSource,
+                     dt: tableMileMaintain,
+                     oDTRowHighlight: tableMileMaintain
+                 };
+             }();
+             $("#divServeTime").resize(function () {
+                 $("#divServeTime").css("width", "100%");
+             });
+             $("#divAnnual").resize(function () {
+                 $("#divAnnual").css("width", "100%");
+             });
+             $("#divLongTimeOff").resize(function () {
+                 $("#divLongTimeOff").css("width", "100%");
+             });
+             $("#divMileMaintain").resize(function () {
+                 $("#divMileMaintain").css("width", "100%");
+             });
+             $("#divAnnual").hide();
+             $("#divLongTimeOff").hide();
+             $("#divMileMaintain").hide();
+
+             $("#Remind").scrollFix(37, "top", "");
+             $("#vehMap").scrollFix(77, "top", "#Remind");
+             $("#OnlineRate").scrollFix(117, "top", "#vehMap");
+
+             $("#refresh").click(function () {
+                 loadLocalData(user.Uid, user.Token, timeout, refreshBack);
+             });
+
+         });
+         function refreshBack() { }
+         var myChart3;
+         var loadShiyonglv = function (mileData, timeData, runStateData, dateData, maxTime, maxMile) {
+             var dataStyle = {
+                 normal: {
+                     label: { show: false },
+                     labelLine: { show: false }
+                 }
+             };
+             var placeHolderStyle = {
+                 normal: {
+                     color: 'rgba(0,0,0,0)',
+                     label: { show: false },
+                     labelLine: { show: false }
+                 },
+                 emphasis: {
+                     color: 'rgba(0,0,0,0)'
+                 }
+             };
+
+             option = {
+                 tooltip: {
+                     trigger: 'axis'
+                 },
+                 calculable: true,
+                 legend: {
+                     data: ['运行里程', '运行时间', '运行', '停运']
+                 },
+                 xAxis: [
+                     {
+                         type: 'category',
+                         splitLine: { show: false },
+                         data: dateData
+                     }
+                 ],
+                 yAxis: [
+                     {
+                         type: 'value',
+                         name: '里程',
+                         axisLabel: {
+                             formatter: '{value} 公里'
+                         },
+                         max: maxMile
+                     },
+                     {
+                         type: 'value',
+                         name: '时间',
+                         axisLabel: {
+                             formatter: '{value} 小时'
+                         },
+                         max: maxTime
+                     }
+
+                 ],
+                 series: [
+
+                     {
+                         name: '运行里程',
+                         type: 'bar',
+                         barWidth: 45,
+                         data: mileData
+                     },
+                     {
+                         name: '运行时间',
+                         type: 'line',
+                         yAxisIndex: 1,
+                         data: timeData
+                     },
+
+                     {
+                         name: '运行状况',
+                         type: 'pie',
+                         tooltip: {
+                             trigger: 'item',
+                             formatter: '{a} <br/>{b} : {c} ({d}%)'
+                         },
+                         center: [200, 130],
+                         radius: [0, 50],
+                         itemStyle: {
+                             normal: {
+                                 labelLine: {
+                                     length: 20
+                                 }
+                             }
+                         },
+                         data: runStateData
+                     }
+                 ]
+             };
+             myChart3.hideLoading();
+             myChart3.setOption(option, true);
+         }
+
+         //var myChart4;
+         //var loadOnlineRate = function (timeArr,data) {
+         //    option = {
+         //        timeline: {
+         //            data: timeArr
+         //        },
+         //        options: [
+         //           {
+         //               tooltip: {
+         //                   trigger: 'item',
+         //                   formatter: "{a} <br/>{b} : {c} ({d}%)"
+         //               },
+         //               legend: {
+         //                   data: ["在线", "离线"]
+         //               },
+         //               color: ["#8ABB27", "#CBC9C9"],
+         //               toolbox: {
+         //                   show: true,
+         //                   feature: {
+         //                       saveAsImage: { show: true }
+         //                   }
+         //               },
+         //               series: [
+         //                   {
+         //                       name: '在线率',
+         //                       type: 'pie',
+         //                       center: ['50%', '45%'],
+         //                       radius: '50%',
+         //                       data: data[0]
+         //                   }
+         //               ]
+         //           },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data:data[1]
+         //                    }
+         //                ]
+         //            },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data: data[2]
+         //                    }
+         //                ]
+         //            },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data: data[3]
+         //                    }
+         //                ]
+         //            },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data: data[4]
+         //                    }
+         //                ]
+         //            },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data: data[5]
+         //                    }
+         //                ]
+         //            },
+         //            {
+         //                series: [
+         //                    {
+         //                        name: '在线率',
+         //                        type: 'pie',
+         //                        data: data[6]
+         //                    }
+         //                ]
+         //            },
+         //        ]
+         //    }
+         //    myChart4.hideLoading();
+         //    myChart4.setOption(option, true);
+         //}
+
+         // 改变窗口大小
+         var changeWidthAndHeight = function () {
+             getBrowserInfo();
+             if (window.screen.width >= 1280 && window.screen.width >= 768) {
+                 //                alert($("#header").height());
+                 //                $("#header").height(window.browserHeight - 49);
+                 //                $("#header").width(window.browserWidth);
+             }
+
+             if (window.Browser.name == "msie" && window.Browser.version == "8.0") {
+                 $("#inputSearch").height(20);
+                 $("#inputSearch").css("margin-top", "5");
+                 $("#inputSearch").css("padding-top", "5");
+                 $("#inputSearch").css("line-height", "18px");
+             }
+         }
+
+         // 自动填充
+         // 处理自动补全数据
+         var autocompleteJson = function (vehicleList) {
+             var autocompleteList = new Array();
+             if (vehicleList.length > 0) {
+                 $.each(vehicleList, function (index, item) {
+                     autocompleteList.push({ "id": item.A, "txt": item.B });
+                     autocompleteList.push({ "id": item.A, "txt": item.C });
+                 });
+             }
+
+             $('#inputSearch').autocomplete(autocompleteList, {
+                 max: 20,    //列表里的条目数
+                 minChars: 1,    //自动补全激活之前填入的最小字符
+                 width: 220,     //提示的宽度，溢出隐藏
+                 scrollHeight: 500,   //提示的高度，溢出显示滚动条
+                 matchContains: true,    //包含匹配，就是data参数里的数据，是否只要包含文本框里的数据就显示
+                 autoFill: false,    //自动填充
+                 formatItem: function (item, i, max) {
+                     return item.txt;
+                 }
+             }).result(function (event, item, formatted) {
+                 //findChooseNode(item.id);
+                 window.open("VehMonit.aspx?&vehid=" + item.id + "&plateNo=" + escape(item.txt));
+             });
+         }
+
+
+
+
+
+         /***菜单js函数***/
+         function rpover() {
+
+             $("#rpContext").addClass("moveon");
+             $("#report").addClass("reprr");
+
+         };
+
+         function rpmove() {
+
+             $("#rpContext").removeClass("moveon");
+             $("#report").removeClass("reprr");
+
+         };
+         function userover() {
+
+             $("#userContext").addClass("userContextmoveon");
+
+         };
+
+         function usermove() {
+
+             $("#userContext").removeClass("userContextmoveon");
+
+         };
+
+         function resizeTable() {
+             $(".yui-dt-bd").css("width", "100%");
+             $(".yui-dt-bd").css("overflow-x", "hidden");
+             $(".yui-dt-bd").css("text-overflow", "ellipsis");
+             $("#divServeTime").css("width", "100%");
+             $("#divAnnual").css("width", "100%");
+             $("#divLongTimeOff").css("width", "100%");
+             $("#divMileMaintain").css("width", "100%");
+         }
+         //导航到
+         function navTo(div) {
+             var div = div;
+             if (div.id == "Remind") {
+                 $("body").animate({ "scrollTop": 0 }, "normal");
+                 $("html").animate({ "scrollTop": 0 }, "normal");
+             }
+             else if (div.id == "vehMap") {
+                 $("body").animate({ "scrollTop": 550 }, "normal");
+                 $("html").animate({ "scrollTop": 550 }, "normal");
+             }
+             else if (div.id == "OnlineRate") {
+                 $("body").animate({ "scrollTop": 1300 }, "normal");
+                 $("html").animate({ "scrollTop": 1300 }, "normal");
+             }
+         }
+
+         //退出
+         function LogOutClick() {
+             asyncbox.confirm("确认退出系统？", "提示", function (action) {
+                 if (action == "ok") {
+                     //window.location = loginPage;
+                     $("#btnExit").click();
+
+                 }
+                 else {
+
+                 }
+             });
+         }
+    </script>
+
+</html>

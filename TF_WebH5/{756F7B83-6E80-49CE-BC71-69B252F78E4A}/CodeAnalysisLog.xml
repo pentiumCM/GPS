@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\fx_xi\AppData\Local\Temp\tmpB673.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="BllSql" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RunSqlExecute(System.String,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="223">传递给 'BllSql.RunSqlExecute(string, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlNonQueryParameters(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="180">可以在方法 'BllSql.RunSqlNonQueryParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 180</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="126">传递给 'BllSql.RunSqlNonQueryParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlProcedure(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="421">可以在方法 'BllSql.RunSqlProcedure(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 421</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="375">传递给 'BllSql.RunSqlProcedure(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sProcedureName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlScalar(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="194">传递给 'BllSql.RunSqlScalar(string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlScalarParameters(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="299">可以在方法 'BllSql.RunSqlScalarParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 299</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="253">传递给 'BllSql.RunSqlScalarParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlScalarProcedureParameters(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="360">可以在方法 'BllSql.RunSqlScalarProcedureParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 360</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="314">传递给 'BllSql.RunSqlScalarProcedureParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlSelect(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="34">传递给 'BllSql.RunSqlSelect(string)' 中的 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlSelectParameters(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="111">可以在方法 'BllSql.RunSqlSelectParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 111</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="63">传递给 'BllSql.RunSqlSelectParameters(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sSql'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RunSqlSelectProcedure(System.Boolean,System.String,System.Collections.Generic.List`1&lt;Models.CSqlParameters&gt;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="485">可以在方法 'BllSql.RunSqlSelectProcedure(bool, string, List&lt;CSqlParameters&gt;, out string)' 中多次释放对象 'sqlCon'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 485</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\App_Code" File="BllSql.cs" Line="436">传递给 'BllSql.RunSqlSelectProcedure(bool, string, List&lt;CSqlParameters&gt;, out string)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'sProcedureName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\fx_xi\AppData\Local\Temp\tmpB673.tmp.cadir\bin\App_Web_jhncyho0.dll">
+   <Modules>
+    <Module Name="app_web_jhncyho0.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="MngUserGroup" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ProcessRequest(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="138">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="143">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="314">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="223">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()', 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="232">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[5][1]', 'new string[5][3]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="236">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[5][1]', 'new string[5][3]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="126">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'strName', 'new string[5][3]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="308">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'strName', 'sMarks'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="133">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'strName', 'sMarks', 'new string[8][5]', 'new string[8][7]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="115">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="211">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngUserGroup.ashx" Line="295">传递给 'MngUserGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MngVehGroup" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ProcessRequest(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehGroup.ashx" Line="283">传递给 'MngVehGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[5][1]', 'ds.Tables[0].Rows[i]["id"]', 'ds.Tables[0].Rows[i]["id"]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehGroup.ashx" Line="266">传递给 'MngVehGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[5][1]', 'strGroupList'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehGroup.ashx" Line="275">传递给 'MngVehGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'strGroupList', 'arrParentGroupID', 'strGroupList'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehGroup.ashx" Line="237">传递给 'MngVehGroup.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'strGroupList'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MngVehicle" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ProcessRequest(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="526">可以在方法 'MngVehicle.ProcessRequest(HttpContext)' 中多次释放对象 'da'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 526</Issue>
+             <Issue Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="700">可以在方法 'MngVehicle.ProcessRequest(HttpContext)' 中多次释放对象 'da'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 700</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-11-15 14:53:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="535">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="547">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="562">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="706">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="731">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="541">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'base.ToString()', 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="724">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[16][1]', 'new string[16][3]', 'new string[16][5]', 'new string[16][7]', 'new string[16][9]', 'new string[16][11]', 'new string[16][13]', 'new string[16][15]', 'new string[13][1]', 'new string[13][3]', 'new string[13][5]', 'new string[13][7]', 'new string[13][9]', 'new string[13][11]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="749">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[16][1]', 'new string[16][3]', 'new string[16][5]', 'new string[16][7]', 'new string[16][9]', 'new string[16][11]', 'new string[16][13]', 'new string[16][15]', 'new string[13][1]', 'new string[13][3]', 'new string[13][5]', 'new string[13][7]', 'new string[13][9]', 'new string[13][11]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="757">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'new string[8][1]', 'new string[8][3]', 'new string[8][5]', 'new string[8][7]', 'new string[7][1]', 'new string[7][3]', 'new string[7][5]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="465">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'txtPlateNO', 'txtSim', 'txtIpAddress', 'this.ConvertMobileTo145IPAddress(txtIpAddress)', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'new string[35][9]', 'txtPowerType', 'txtVehLevel2MaintenanceTime', 'txtDriverName', 'new string[35][17]', 'new string[5][1]', 'new string[5][3]', 'txtPlateNO', 'new string[35][23]', 'txtSim', 'new string[35][27]', 'txtIpAddress', 'new string[35][33]'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebH5\TF_WebH5\Ashx" File="MngVehicle.ashx" Line="639">传递给 'MngVehicle.ProcessRequest(HttpContext)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'txtPlateNO', 'txtSim', 'txtIpAddress', 'this.ConvertMobileTo145IPAddress(txtIpAddress)', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'txtIpAddress.PadLeft(12, '0')', 'txtVehLevel2MaintenanceTime', 'txtPowerType', 'base.ToString()', 'txtPlateNO', 'txtSim', 'txtIpAddress'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>不要多次释放对象</Name>
+   <Description>可以多次调用正确实现的 Dispose 方法，而不会引发异常。但是，并不保证所有情况下都会如此。若要避免生成 System.ObjectDisposedException，您不应对一个对象多次调用 Dispose。</Description>
+   <Resolution Name="Default">可以在方法 {1} 中多次释放对象 {0}。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 485</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

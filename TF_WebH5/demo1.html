@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="Css/index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="EasyUI/themes/default/easyui.css" />    <link rel="stylesheet" type="text/css" href="EasyUI/themes/color.css" />    <link rel="stylesheet" type="text/css" href="EasyUI/themes/icon.css" />      <script type="text/javascript" src="EasyUI/jquery.min.js"></script>      <script type="text/javascript" src="EasyUI/jquery.easyui.min.js"></script>     <script type="text/javascript" src="Js/GenerageGuid.js"></script>     <script type="text/javascript" src="Js/JsCookies.js"></script> 
+    <script type="text/javascript" language="javascript"></script>
+    <script type="text/javascript">
+        function AddLable()
+        {
+            var label = document.createElement('div'); //创建文字标签
+            label.innerHTML = "222";
+            label.style.position = 'absolute';
+            label.style.width = '200px';
+            label.style.fontWeight = "bold";
+            label.style.textAlign = 'left';
+            label.style.color = "red";
+            label.style.padding = "2px";
+            label.style.fontSize = "14px";
+            label.style.marginTop = "-20px";
+            label.onclick = function()
+            {
+                alert("a");
+            }
+            document.getElementById("divLable").appendChild(label);
+        }
+        
+        function CookieAdd()
+        {
+            SetCookie("test","1");
+        }
+        
+        function CookieModify()
+        {
+            SetCookie("test","2");
+        }
+        
+        function CookieGet()
+        {
+//        var Days = 3;
+//        var exp = new Date();
+//        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+//        alert( exp.toGMTString());
+//            alert( GetCookie("test"));
+            var attchJson = new Array();
+            var row = { id: "22", name: "3" };
+            attchJson.push(row);
+            row = { id: "23", name: "1" };
+            attchJson.push(row);
+//            var ss = $.parseJSON('[{"id":"G1748","name":"wu","PID":"G-1","HasChild":1}]');
+//                alert($.stringify(ss));
+        }
+        
+        function CookieDel()
+        {
+            delCookie("test");
+        }
+        
+        var sByte = "7F";
+        var erjinzhi = parseInt(sByte,16).toString(2);
+        
+        var support = "MozWebSocket" in window ? 'MozWebSocket' : ("WebSocket" in window ? 'WebSocket' : null);
+        var ws = new window[support]('ws://192.168.1.159:2012/');
+//        ws.binaryType = 'arraybuffer';
+        ws.onmessage = function (evt) {
+            try
+            {
+                var sReturn ;
+                        if(typeof(evt.data)=="string"){ 
+                            sReturn = evt.data;
+                        }else{ 
+                            var reader = new FileReader(); 
+                            reader.onload = function(evt){ 
+                                if(evt.target.readyState == FileReader.DONE){ 
+                                    var dataBlob = new Uint8Array(evt.target.result); 
+                                    for(var k = 0; k < dataBlob.length; k++)
+                                    {
+                                        sReturn = sReturn + String.fromCharCode(dataBlob[k]);
+                                    }
+                                } 
+                            } 
+                            reader.readAsArrayBuffer(evt.data); 
+                        }
+                        if(sReturn.length == 0)
+                        {
+                            return;
+                        } 
+            }
+            catch (e)
+            {}
+        }
+        
+        ws.onopen = function () {
+            var sLogin = "[{'key':'1_1','ver':1,'rows':1,'cols':2,data:[{'name':'wys','pwd':'wys','type':1}]}]";
+                    ws.send(sLogin);
+            var sGetLocation = "[{'key':'1_2','ver':1,'rows':0,'cols':0,data:[{}]}]";
+                                        ws.send(sGetLocation);
+        }
+        
+//        alert(String.fromCharCode(72));
+        
+        var date1=new Date("2016-09-16 10:57:01".replace(/-/g,"/"));  //开始时间
+var date2=new Date();    //结束时间
+var date3=date2.getTime()-date1.getTime()  //时间差的毫秒数
+//alert(date3 / 1000 / 60); 
+
+//计算出相差天数
+var days=Math.floor(date3/(24*3600*1000))
+ 
+//计算出小时数
+
+var leave1=date3%(24*3600*1000)    //计算天数后剩余的毫秒数
+var hours=Math.floor(leave1/(3600*1000))
+//计算相差分钟数
+var leave2=leave1%(3600*1000)        //计算小时数后剩余的毫秒数
+var minutes=Math.floor(leave2/(60*1000))
+ 
+
+//计算相差秒数
+var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
+var seconds=Math.round(leave3/1000)
+ 
+
+//alert(" 相差 "+days+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒")
+    function load()
+    {
+        $("#divdis").attr("disabled", "true");
+        $("#divdis")..attr("disabled","disabled");
+    }
+    </script>
+ </HEAD>
+
+ <BODY onload="load()">
+    <a href="#;" id="divdis" onclick="alert('a')" class="easyui-menubutton">sssss</a>
+    <div id="divLable" disabled>22<button id="Button1" value="添加cookie">添加cookie</button></div>
+    <button id="addCookie" onclick="CookieAdd()" value="添加cookie">添加cookie</button>
+    <button id="modifyCookie" onclick="CookieModify()" value="修改cookie">修改cookie</button>
+    <button id="DelCookie" value="删除cookie" onclick="CookieDel()">删除cookie</button>
+    <button id="读取" value="读取cookie" onclick="AddLable();">读取cookie</button><!--CookieGet()-->
+ </BODY>
+</HTML>

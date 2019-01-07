@@ -1,0 +1,26 @@
+﻿[{
+  "id":-1,
+  "text":" ",
+  "spell":""
+
+},{
+  "id":1,
+  "text":"类型1",
+  "spell":"lx1"
+},{
+  "id":2,
+  "text":"类型2",
+  "spell":"lx2"
+},{
+  "id":3,
+  "text":"类型3",
+  "spell":"lx3"
+},{
+  "id":4,
+  "text":"类型4",
+  "spell":"lx4"
+},{
+  "id":5,
+  "text":"类型5",
+  "spell":"lx5"
+}]

@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountNotEnterIllegalCharacters" xml:space="preserve">
+    <value>Account please do not enter illegal characters!</value>
+  </data>
+  <data name="AccountNotExist" xml:space="preserve">
+    <value>Account does not exist!</value>
+  </data>
+  <data name="AccountOverdue" xml:space="preserve">
+    <value>Account overdue</value>
+  </data>
+  <data name="AlarmInformation" xml:space="preserve">
+    <value>Alarm Information</value>
+  </data>
+  <data name="BaiduMap" xml:space="preserve">
+    <value>Baidu Map</value>
+  </data>
+  <data name="BasicFunction" xml:space="preserve">
+    <value>General function</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseAll" xml:space="preserve">
+    <value>Close all</value>
+  </data>
+  <data name="ClosedAllButThis" xml:space="preserve">
+    <value>Close all except this</value>
+  </data>
+  <data name="ClosedLeftSide" xml:space="preserve">
+    <value>Clse left side</value>
+  </data>
+  <data name="ClosedRightSide" xml:space="preserve">
+    <value>Close Right side</value>
+  </data>
+  <data name="CompanyLogin" xml:space="preserve">
+    <value>Company Login</value>
+  </data>
+  <data name="EndterVerificationCode" xml:space="preserve">
+    <value>Please enter the Verification code...</value>
+  </data>
+  <data name="EnterAccount" xml:space="preserve">
+    <value>Please enter the account...</value>
+  </data>
+  <data name="EnterAccountAndPassword" xml:space="preserve">
+    <value>Please enter account and password!</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Please enter the password...</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="GoogleMap" xml:space="preserve">
+    <value>Google map</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InteractiveContent" xml:space="preserve">
+    <value>Interactive Content</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>IpAddress</value>
+  </data>
+  <data name="LoadingVehicleData" xml:space="preserve">
+    <value>Loading vehicle data...</value>
+  </data>
+  <data name="Loding" xml:space="preserve">
+    <value>Loading , please wait. . .</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Maps" xml:space="preserve">
+    <value>Maps</value>
+  </data>
+  <data name="NotEnterIllegalCharacters" xml:space="preserve">
+    <value>please do not enter illegal characters!</value>
+  </data>
+  <data name="NoVeh" xml:space="preserve">
+    <value>No selected vehicles vehicle list</value>
+  </data>
+  <data name="Plate" xml:space="preserve">
+    <value>Plate</value>
+  </data>
+  <data name="PleaseLogin" xml:space="preserve">
+    <value>Please login first platform or login timeout</value>
+  </data>
+  <data name="Prompt" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="PwdNotEnterIllegalCharacters" xml:space="preserve">
+    <value>Password please do not enter illegal characters!</value>
+  </data>
+  <data name="RealtimeInformation" xml:space="preserve">
+    <value>Realtime Information</value>
+  </data>
+  <data name="Rember" xml:space="preserve">
+    <value>Rember the account</value>
+  </data>
+  <data name="ScriptSupport" xml:space="preserve">
+    <value>Please open the script support!</value>
+  </data>
+  <data name="Sim" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="TaxiNo" xml:space="preserve">
+    <value>TaxiNo</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="TeamOrPlate" xml:space="preserve">
+    <value>Team/Plate</value>
+  </data>
+  <data name="TerminalToolbar" xml:space="preserve">
+    <value>Terminal toolbar</value>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip！</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Gps/BD Monitoring Platform</value>
+  </data>
+  <data name="TitleDetail" xml:space="preserve">
+    <value>Vehicle monitoring、History、Car Burglar Alarm</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Unknown Error!</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="VehDetail" xml:space="preserve">
+    <value>Vehicle detail</value>
+  </data>
+  <data name="VehList" xml:space="preserve">
+    <value>Vehicle list</value>
+  </data>
+  <data name="VehLogin" xml:space="preserve">
+    <value>Vehicle Login</value>
+  </data>
+  <data name="Visit" xml:space="preserve">
+    <value>Visit</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Welcome_1" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="Welcome_2" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="Welcome_3" xml:space="preserve">
+    <value>l</value>
+  </data>
+  <data name="Welcome_4" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="Welcome_5" xml:space="preserve">
+    <value>o</value>
+  </data>
+  <data name="Welcome_6" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Welcome_7" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="Welcome_8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LoadVehComplete" xml:space="preserve">
+    <value>Load vehicle complete!</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AlarmAddress" xml:space="preserve">
+    <value>Alarm address</value>
+  </data>
+  <data name="AlarmCount" xml:space="preserve">
+    <value>Alarm count</value>
+  </data>
+  <data name="AlarmTime" xml:space="preserve">
+    <value>Alarm time</value>
+  </data>
+  <data name="AlarmType" xml:space="preserve">
+    <value>Alarm type</value>
+  </data>
+  <data name="BusinessPerson" xml:space="preserve">
+    <value>Ton</value>
+  </data>
+  <data name="CarColor" xml:space="preserve">
+    <value>Car Color</value>
+  </data>
+  <data name="Contact2" xml:space="preserve">
+    <value>Contact2</value>
+  </data>
+  <data name="Contact3" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Contract1" xml:space="preserve">
+    <value>Contract1</value>
+  </data>
+  <data name="DataTime" xml:space="preserve">
+    <value>Data time</value>
+  </data>
+  <data name="Decph" xml:space="preserve">
+    <value>Plate color</value>
+  </data>
+  <data name="EngineNo" xml:space="preserve">
+    <value>EngineNo</value>
+  </data>
+  <data name="EnrolDate" xml:space="preserve">
+    <value>Insurance date</value>
+  </data>
+  <data name="FrameNo" xml:space="preserve">
+    <value>FrameNo</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Fuel(L)</value>
+  </data>
+  <data name="FuelScale" xml:space="preserve">
+    <value>Fuel scale</value>
+  </data>
+  <data name="InstallAddress" xml:space="preserve">
+    <value>Transport license id</value>
+  </data>
+  <data name="InstallPerson" xml:space="preserve">
+    <value>Install person</value>
+  </data>
+  <data name="Interactive" xml:space="preserve">
+    <value>Interactive</value>
+  </data>
+  <data name="Lat" xml:space="preserve">
+    <value>Lat</value>
+  </data>
+  <data name="Lng" xml:space="preserve">
+    <value>Lng</value>
+  </data>
+  <data name="LogOutCause" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Marks" xml:space="preserve">
+    <value>Marks</value>
+  </data>
+  <data name="Mileage" xml:space="preserve">
+    <value>Mileage(KM)</value>
+  </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>Owner name</value>
+  </data>
+  <data name="PositionStatus" xml:space="preserve">
+    <value>Position status</value>
+  </data>
+  <data name="PowerType" xml:space="preserve">
+    <value>Power type</value>
+  </data>
+  <data name="ProductCode" xml:space="preserve">
+    <value>Custom code</value>
+  </data>
+  <data name="PurchaseDate" xml:space="preserve">
+    <value>Service start time</value>
+  </data>
+  <data name="ReceiveSendTime" xml:space="preserve">
+    <value>Receive(Send) time</value>
+  </data>
+  <data name="RecordPerson" xml:space="preserve">
+    <value>Commercially line</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Seller</value>
+  </data>
+  <data name="ServerEndTime" xml:space="preserve">
+    <value>Server end time</value>
+  </data>
+  <data name="ServerMoney" xml:space="preserve">
+    <value>Server money</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="SpeedAngle" xml:space="preserve">
+    <value>Speed and angle</value>
+  </data>
+  <data name="Tel1" xml:space="preserve">
+    <value>Tel1</value>
+  </data>
+  <data name="Tel2" xml:space="preserve">
+    <value>Tel2</value>
+  </data>
+  <data name="Tel3" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UnitStatus" xml:space="preserve">
+    <value>Unit status</value>
+  </data>
+  <data name="VehicleType" xml:space="preserve">
+    <value>Vehicle type</value>
+  </data>
+  <data name="YyZh" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="BrowserNotSupport" xml:space="preserve">
+    <value>Your browser cannot support WebSocket!</value>
+  </data>
+  <data name="ConnectingServer" xml:space="preserve">
+    <value>Connecting to server ...</value>
+  </data>
+  <data name="ConnectionClosed" xml:space="preserve">
+    <value>Connection closed ...</value>
+  </data>
+  <data name="SuccessfulConnectionCenter" xml:space="preserve">
+    <value>Successful connection center server</value>
+  </data>
+  <data name="SuccessfulLoginCenter" xml:space="preserve">
+    <value>Successful login center</value>
+  </data>
+  <data name="Fault" xml:space="preserve">
+    <value>Fault</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>Successful</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="LodingLastpostion" xml:space="preserve">
+    <value>Loding lastpostion ...</value>
+  </data>
+  <data name="LodingLastpostionComplete" xml:space="preserve">
+    <value>Loding lastpostion complete ...</value>
+  </data>
+  <data name="AngleEast" xml:space="preserve">
+    <value>east</value>
+  </data>
+  <data name="AngleEastByNorth" xml:space="preserve">
+    <value>East by north</value>
+  </data>
+  <data name="AngleEastBySouth" xml:space="preserve">
+    <value>East by south</value>
+  </data>
+  <data name="AngleNorth" xml:space="preserve">
+    <value>North</value>
+  </data>
+  <data name="AngleNorthByEast" xml:space="preserve">
+    <value>North by east</value>
+  </data>
+  <data name="AngleNorthByWest" xml:space="preserve">
+    <value>Northby west</value>
+  </data>
+  <data name="AngleSouth" xml:space="preserve">
+    <value>South</value>
+  </data>
+  <data name="AngleSouthByEast" xml:space="preserve">
+    <value>South by east</value>
+  </data>
+  <data name="AngleSouthByWest" xml:space="preserve">
+    <value>South by west</value>
+  </data>
+  <data name="AngleWest" xml:space="preserve">
+    <value>West</value>
+  </data>
+  <data name="AngleWestByNorth" xml:space="preserve">
+    <value>West by north</value>
+  </data>
+  <data name="AngleWestBySouth" xml:space="preserve">
+    <value>West by south</value>
+  </data>
+  <data name="AccOff" xml:space="preserve">
+    <value>Acc off</value>
+  </data>
+  <data name="AccOn" xml:space="preserve">
+    <value>acc on</value>
+  </data>
+  <data name="AlarmDriverOvertime" xml:space="preserve">
+    <value>Driver overtime alarm</value>
+  </data>
+  <data name="AlarmOverSpeed" xml:space="preserve">
+    <value>Over speed alarm</value>
+  </data>
+  <data name="AlarmParkingSuperlong" xml:space="preserve">
+    <value>Parking superlong alarm</value>
+  </data>
+  <data name="AlarmRob" xml:space="preserve">
+    <value>Rob alarm</value>
+  </data>
+  <data name="AllowCalls" xml:space="preserve">
+    <value>Allow calls</value>
+  </data>
+  <data name="AllowCallsIn" xml:space="preserve">
+    <value>Allow calls in</value>
+  </data>
+  <data name="AllowCallsOut" xml:space="preserve">
+    <value>Allow calls out</value>
+  </data>
+  <data name="AntennaFault" xml:space="preserve">
+    <value>Antenna fault</value>
+  </data>
+  <data name="AntennaNormal" xml:space="preserve">
+    <value>Antenna normal</value>
+  </data>
+  <data name="AntennaOpen" xml:space="preserve">
+    <value>Antenna open</value>
+  </data>
+  <data name="AntennaShortCircuit" xml:space="preserve">
+    <value>Antenna short circuit</value>
+  </data>
+  <data name="BasestationLocation" xml:space="preserve">
+    <value>Basestation location</value>
+  </data>
+  <data name="Foreward" xml:space="preserve">
+    <value>Foreward</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="NotLocating" xml:space="preserve">
+    <value>Not locating</value>
+  </data>
+  <data name="OilDisconnect" xml:space="preserve">
+    <value>Oil disconnect</value>
+  </data>
+  <data name="OilNormal" xml:space="preserve">
+    <value>Oil normal</value>
+  </data>
+  <data name="PowerNormal" xml:space="preserve">
+    <value>Power normal</value>
+  </data>
+  <data name="PowerOff" xml:space="preserve">
+    <value>Power off</value>
+  </data>
+  <data name="PowerVoltageLow" xml:space="preserve">
+    <value>Power voltage low</value>
+  </data>
+  <data name="ProhibitCalls" xml:space="preserve">
+    <value>Prohibit calls</value>
+  </data>
+  <data name="ProhibitCallsIn" xml:space="preserve">
+    <value>Prohibit calls in</value>
+  </data>
+  <data name="ProhibitCallsOut" xml:space="preserve">
+    <value>Prohibit calls out</value>
+  </data>
+  <data name="Reversal" xml:space="preserve">
+    <value>Reversal</value>
+  </data>
+  <data name="Stalling" xml:space="preserve">
+    <value>Stalling</value>
+  </data>
+  <data name="MapType" xml:space="preserve">
+    <value>google</value>
+  </data>
+  <data name="AlarmAbnormalOil" xml:space="preserve">
+    <value>Abnormal oil</value>
+  </data>
+  <data name="AlarmCollisionWarning" xml:space="preserve">
+    <value>Collision warning</value>
+  </data>
+  <data name="AlarmIllegalDisplacement" xml:space="preserve">
+    <value>Illegal displacement</value>
+  </data>
+  <data name="AlarmIllegalIgnition" xml:space="preserve">
+    <value>Illegal ignition</value>
+  </data>
+  <data name="AlarmInOutLine" xml:space="preserve">
+    <value>In and out of line warning</value>
+  </data>
+  <data name="AlarmInOutRegion" xml:space="preserve">
+    <value>In and out of region warning</value>
+  </data>
+  <data name="AlarmLineDepartureWarning" xml:space="preserve">
+    <value>Line departure warning</value>
+  </data>
+  <data name="AlarmOpenDoor" xml:space="preserve">
+    <value>Illegal to open the door alarm</value>
+  </data>
+  <data name="AlarmRolloverWarning" xml:space="preserve">
+    <value>Rollover warning</value>
+  </data>
+  <data name="AlarmTimeoutParking" xml:space="preserve">
+    <value>Timeout parking</value>
+  </data>
+  <data name="AlarmVehicleStolen" xml:space="preserve">
+    <value>Vehicle is stolen</value>
+  </data>
+  <data name="AlarmVSSFault" xml:space="preserve">
+    <value>VSS fault</value>
+  </data>
+  <data name="CircuitDisconnection" xml:space="preserve">
+    <value>Circuit disconnection</value>
+  </data>
+  <data name="CircuitNormal" xml:space="preserve">
+    <value>Circuit is normal</value>
+  </data>
+  <data name="AirConditionerClose" xml:space="preserve">
+    <value>Air conditioner close</value>
+  </data>
+  <data name="AirConditionerOpen" xml:space="preserve">
+    <value>Air conditioner open</value>
+  </data>
+  <data name="AlarmCameraFault" xml:space="preserve">
+    <value>Camera fault</value>
+  </data>
+  <data name="AlarmCrashForewarning" xml:space="preserve">
+    <value>Crash forewarning</value>
+  </data>
+  <data name="AlarmFatigueDriving" xml:space="preserve">
+    <value>Fatigue driving alarm</value>
+  </data>
+  <data name="AlarmFatigueDrivingForewarning" xml:space="preserve">
+    <value>Fatigue driving forewarning</value>
+  </data>
+  <data name="AlarmGNSSModuleFault" xml:space="preserve">
+    <value>GNSS module Fault Alarm</value>
+  </data>
+  <data name="AlarmICCardFault" xml:space="preserve">
+    <value>ICCard fault</value>
+  </data>
+  <data name="AlarmInAndOutOfTheArea" xml:space="preserve">
+    <value>In and out of the area alarm</value>
+  </data>
+  <data name="AlarmInAndOutOfTheLine" xml:space="preserve">
+    <value>In and out of the line alarm</value>
+  </data>
+  <data name="AlarmOutOfTheLine" xml:space="preserve">
+    <value>Out of the line alarm</value>
+  </data>
+  <data name="AlarmOverSpeedForewarning" xml:space="preserve">
+    <value>Over speed forewarning</value>
+  </data>
+  <data name="AlarmRolloverForewarning" xml:space="preserve">
+    <value>Rollover forewarning</value>
+  </data>
+  <data name="Brakes" xml:space="preserve">
+    <value>Brakes</value>
+  </data>
+  <data name="DistanceLight" xml:space="preserve">
+    <value>Distance light </value>
+  </data>
+  <data name="Door5" xml:space="preserve">
+    <value>Door 5 </value>
+  </data>
+  <data name="DoorBack" xml:space="preserve">
+    <value>Back door </value>
+  </data>
+  <data name="DoorClose" xml:space="preserve">
+    <value>close</value>
+  </data>
+  <data name="DoorDriver" xml:space="preserve">
+    <value>Driver door </value>
+  </data>
+  <data name="DoorFront" xml:space="preserve">
+    <value>Front door </value>
+  </data>
+  <data name="DoorMiddle" xml:space="preserve">
+    <value>Middle door </value>
+  </data>
+  <data name="DoorOpen" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="EngineClose" xml:space="preserve">
+    <value>Engine close</value>
+  </data>
+  <data name="EngineOpen" xml:space="preserve">
+    <value>Engine open</value>
+  </data>
+  <data name="NoBrakes" xml:space="preserve">
+    <value>No brakes</value>
+  </data>
+  <data name="SteerLeft" xml:space="preserve">
+    <value>Steer left </value>
+  </data>
+  <data name="SteerRight" xml:space="preserve">
+    <value>Steer right </value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="RightAccOffTimingInterval" xml:space="preserve">
+    <value>Acc off timing interval</value>
+  </data>
+  <data name="RightAccOnTimingInterval" xml:space="preserve">
+    <value>Acc on timing interval</value>
+  </data>
+  <data name="RightCallName" xml:space="preserve">
+    <value>CallName</value>
+  </data>
+  <data name="RightPhotograph" xml:space="preserve">
+    <value>Photograph</value>
+  </data>
+  <data name="RightTerminalControl" xml:space="preserve">
+    <value>Terminal control</value>
+  </data>
+  <data name="RightTerminalSettings" xml:space="preserve">
+    <value>Terminal settings</value>
+  </data>
+  <data name="RightTrackPlayback" xml:space="preserve">
+    <value>Track play back</value>
+  </data>
+  <data name="RightVehicleInformationCommand" xml:space="preserve">
+    <value>Vehicle information command</value>
+  </data>
+  <data name="RigthTerminalControlInstruction" xml:space="preserve">
+    <value>Terminal control instruction</value>
+  </data>
+  <data name="SuccessfullySentToTheCenter" xml:space="preserve">
+    <value>Successfully sent to the center</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Datas" xml:space="preserve">
+    <value>datas!</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="FillInError" xml:space="preserve">
+    <value>Fill in error!</value>
+  </data>
+  <data name="GetLocationInformation" xml:space="preserve">
+    <value>Get location information</value>
+  </data>
+  <data name="NoEmpty" xml:space="preserve">
+    <value>Can't be empty!</value>
+  </data>
+  <data name="QueryCompleteTotal" xml:space="preserve">
+    <value>Query complete: total</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="StartTimeNotGreaterEndTime" xml:space="preserve">
+    <value>Start time is not greater than end time!</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="DisplayAllTrackPosition" xml:space="preserve">
+    <value>Display address</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="HistoryData" xml:space="preserve">
+    <value>History data</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Nearby" xml:space="preserve">
+    <value>Nearby</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>Query</value>
+  </data>
+  <data name="Interval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value> second</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value> minute</value>
+  </data>
+  <data name="GpsNavigation" xml:space="preserve">
+    <value>Gps navigation</value>
+  </data>
+  <data name="MessageIsWrong" xml:space="preserve">
+    <value>Message is wrong</value>
+  </data>
+  <data name="Nonsupport" xml:space="preserve">
+    <value>Nonsupport</value>
+  </data>
+  <data name="RealtimeVideoMonitoring" xml:space="preserve">
+    <value>Realtime video monitoring</value>
+  </data>
+  <data name="TerminalParameterSettings" xml:space="preserve">
+    <value>Terminal parameter settings</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="ImageReport" xml:space="preserve">
+    <value>Image report</value>
+  </data>
+  <data name="MileageReport" xml:space="preserve">
+    <value>Mileage report</value>
+  </data>
+  <data name="ReportFunction" xml:space="preserve">
+    <value>Report function</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="MapGet" xml:space="preserve">
+    <value>Map get</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Translation</value>
+  </data>
+  <data name="PhotoResolution" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="PhotoShootingChannel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="PhotoShootingCommand" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="PhotoShootingInterval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="RealtimeUpload" xml:space="preserve">
+    <value>Realtime upload</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BrowserVideoNotSupport" xml:space="preserve">
+    <value>Your browser does not support the video tag.</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ByDay" xml:space="preserve">
+    <value>By day</value>
+  </data>
+  <data name="ByMonth" xml:space="preserve">
+    <value>By month</value>
+  </data>
+  <data name="BySeason" xml:space="preserve">
+    <value>By season</value>
+  </data>
+  <data name="ByWeek" xml:space="preserve">
+    <value>By week</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="DialEndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="DialStartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FuelConsumption" xml:space="preserve">
+    <value>Fuel consumption</value>
+  </data>
+  <data name="FuelUnitPer100" xml:space="preserve">
+    <value>Litre/100 km</value>
+  </data>
+  <data name="MileageCorrectionRatio" xml:space="preserve">
+    <value>Mileage correction ratio</value>
+  </data>
+  <data name="MileEnd" xml:space="preserve">
+    <value>Mile end</value>
+  </data>
+  <data name="MileStart" xml:space="preserve">
+    <value>Start mile</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Reduce" xml:space="preserve">
+    <value>Reduce</value>
+  </data>
+  <data name="StatisticalType" xml:space="preserve">
+    <value>Statistical type</value>
+  </data>
+  <data name="VehicleCode" xml:space="preserve">
+    <value>Vehicle code</value>
+  </data>
+  <data name="WorkTime" xml:space="preserve">
+    <value>Work time</value>
+  </data>
+  <data name="YuanPerLiter" xml:space="preserve">
+    <value>yuan/Litre</value>
+  </data>
+  <data name="FenceAddPolygon" xml:space="preserve">
+    <value>Add polygon fence</value>
+  </data>
+  <data name="FenceAllElectronic" xml:space="preserve">
+    <value>All electronic fence</value>
+  </data>
+  <data name="FenceBindVehicle" xml:space="preserve">
+    <value>Bind vehicle</value>
+  </data>
+  <data name="FenceDel" xml:space="preserve">
+    <value>Del Fence</value>
+  </data>
+  <data name="FenceDisplay" xml:space="preserve">
+    <value>Display fence</value>
+  </data>
+  <data name="FenceHide" xml:space="preserve">
+    <value>Hide fence</value>
+  </data>
+  <data name="FenceMidifyName" xml:space="preserve">
+    <value>Midify fence name</value>
+  </data>
+  <data name="FencePolygon" xml:space="preserve">
+    <value>Polygon fence</value>
+  </data>
+  <data name="FenceRegionManage" xml:space="preserve">
+    <value>Fence region manage</value>
+  </data>
+  <data name="LocationManager" xml:space="preserve">
+    <value>Location manager</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="EnterFenceAreaAlarm" xml:space="preserve">
+    <value>Enter the fence alarm</value>
+  </data>
+  <data name="FenceType" xml:space="preserve">
+    <value>Fence type</value>
+  </data>
+  <data name="LeaveFenceAreaAlarm" xml:space="preserve">
+    <value>Leave the fence alarm</value>
+  </data>
+  <data name="VehicleLeaveFenceScheduleTimeAlarm" xml:space="preserve">
+    <value>Vehicle leave the fence in schedule time alarm</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="VehFenceScheduleTimeReport" xml:space="preserve">
+    <value>Vehicle leave the fence in schedule time report</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="DurationTime" xml:space="preserve">
+    <value>Duration time</value>
+  </data>
+  <data name="KmHour" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="MaxSpeed" xml:space="preserve">
+    <value>Max speed</value>
+  </data>
+  <data name="OverSpeedSetting" xml:space="preserve">
+    <value>Over speed setting</value>
+  </data>
+  <data name="ReportSpeedSift" xml:space="preserve">
+    <value>Speed sift report</value>
+  </data>
+  <data name="AccOffEndTime" xml:space="preserve">
+    <value>AccOff end time</value>
+  </data>
+  <data name="AccOffStartTime" xml:space="preserve">
+    <value>AccOff start time</value>
+  </data>
+  <data name="AccOnEndTime" xml:space="preserve">
+    <value>AccOn end time</value>
+  </data>
+  <data name="AccOnStartTime" xml:space="preserve">
+    <value>AccOn start time</value>
+  </data>
+  <data name="CountTime" xml:space="preserve">
+    <value>Count time</value>
+  </data>
+  <data name="ReportAcc" xml:space="preserve">
+    <value>Acc report</value>
+  </data>
+  <data name="AccOffTimeDetail" xml:space="preserve">
+    <value>AccOff time detail</value>
+  </data>
+  <data name="AccOnTimeDetail" xml:space="preserve">
+    <value>AccOn time detail</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value> day</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value> hour</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="ReportAlarm" xml:space="preserve">
+    <value>Report alarm</value>
+  </data>
+  <data name="DebugInfo" xml:space="preserve">
+    <value>Debug info</value>
+  </data>
+  <data name="SendNum" xml:space="preserve">
+    <value>Send num</value>
+  </data>
+  <data name="TerminalDismantle" xml:space="preserve">
+    <value>Terminal dismantle</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="ACARBluetoothClose" xml:space="preserve">
+    <value>ACAR bluetooth close</value>
+  </data>
+  <data name="ACARBluetoothFailure" xml:space="preserve">
+    <value>ACAR bluetooth failure</value>
+  </data>
+  <data name="ACARBluetoothNormal" xml:space="preserve">
+    <value>ACAR bluetooth normal</value>
+  </data>
+  <data name="ACARBluetoothOpen" xml:space="preserve">
+    <value>ACAR bluetooth open</value>
+  </data>
+  <data name="BCARNormal" xml:space="preserve">
+    <value>BCAR normal</value>
+  </data>
+  <data name="BCARTest" xml:space="preserve">
+    <value>BCAR test</value>
+  </data>
+  <data name="G_SensorAnomaly" xml:space="preserve">
+    <value>G_Sensor anomaly</value>
+  </data>
+  <data name="G_SensorNormal" xml:space="preserve">
+    <value>G_Sensor normal</value>
+  </data>
+  <data name="MovementPatternTime" xml:space="preserve">
+    <value>Movement pattern time</value>
+  </data>
+  <data name="StaticModelTime" xml:space="preserve">
+    <value>Static model time</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="SendSchedulingInformation" xml:space="preserve">
+    <value>Distributed scheduling information</value>
+  </data>
+  <data name="Times" xml:space="preserve">
+    <value> times</value>
+  </data>
+  <data name="TimingTimeComesBack" xml:space="preserve">
+    <value>Timing time comes back</value>
+  </data>
+  <data name="SchedulingInformation" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="ThisLan" xml:space="preserve">
+    <value>en-US</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="TrajectoryOver" xml:space="preserve">
+    <value>The trajectory was over!</value>
+  </data>
+  <data name="Battery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="K1Title" xml:space="preserve">
+    <value>The financial wind control platform</value>
+  </data>
+  <data name="K1TitleDetail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LanChange" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="MyCar" xml:space="preserve">
+    <value>My car</value>
+  </data>
+  <data name="BackEnd" xml:space="preserve">
+    <value>Back end</value>
+  </data>
+  <data name="Del" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="K1Title2" xml:space="preserve">
+    <value>Car networking integrated management platform</value>
+  </data>
+  <data name="InformationBar" xml:space="preserve">
+    <value>Information bar</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="VehGroupMng" xml:space="preserve">
+    <value>Motorcade Manage</value>
+  </data>
+  <data name="VehGroupName" xml:space="preserve">
+    <value>Motorcade Name</value>
+  </data>
+  <data name="QuicklyLocateTheTeam" xml:space="preserve">
+    <value>Quickly locate the team</value>
+  </data>
+  <data name="TheSuperiorTeam" xml:space="preserve">
+    <value>The superior team</value>
+  </data>
+  <data name="AddFailureExistsMotorcade" xml:space="preserve">
+    <value>Add failure, system already exists in the motorcade!</value>
+  </data>
+  <data name="EditFailureSelfTteam" xml:space="preserve">
+    <value>Edit failure, are not allowed to add yourself to the team!</value>
+  </data>
+  <data name="HasSameName" xml:space="preserve">
+    <value>Has the same name</value>
+  </data>
+  <data name="NotExistsVehicleGroup" xml:space="preserve">
+    <value>Not exists the vehicle group</value>
+  </data>
+  <data name="ParameterError" xml:space="preserve">
+    <value>Parameter error</value>
+  </data>
+  <data name="VehicleMng" xml:space="preserve">
+    <value>Vehicle Manage</value>
+  </data>
+  <data name="AddGroup" xml:space="preserve">
+    <value>Add Group</value>
+  </data>
+  <data name="AddVehicle" xml:space="preserve">
+    <value>Add Vehicle</value>
+  </data>
+  <data name="AnnualInspectionRepairTime" xml:space="preserve">
+    <value>Annual inspection/repair service time</value>
+  </data>
+  <data name="ColorBlack" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="ColorBlue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="ColorGray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="ColorGreen" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="ColorOrange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="ColorRed" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="ColorWhite" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="ColorYellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="VehAddress" xml:space="preserve">
+    <value>Concact address</value>
+  </data>
+  <data name="VehCarColor" xml:space="preserve">
+    <value>Car color</value>
+  </data>
+  <data name="VehCarType" xml:space="preserve">
+    <value>Car type</value>
+  </data>
+  <data name="VehCenterInfo" xml:space="preserve">
+    <value>Center info</value>
+  </data>
+  <data name="VehContact1" xml:space="preserve">
+    <value>Contact1</value>
+  </data>
+  <data name="VehContact2" xml:space="preserve">
+    <value>Contact2</value>
+  </data>
+  <data name="VehCustomNum" xml:space="preserve">
+    <value>Custom num</value>
+  </data>
+  <data name="VehDriverName" xml:space="preserve">
+    <value>Driver name</value>
+  </data>
+  <data name="VehEmail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="VehEngineNumber" xml:space="preserve">
+    <value>Engine number</value>
+  </data>
+  <data name="VehFemale" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="VehFrameNumber" xml:space="preserve">
+    <value>Frame number(Vin)</value>
+  </data>
+  <data name="VehicleTransportLicenseID" xml:space="preserve">
+    <value>Transport license id</value>
+  </data>
+  <data name="VehIdentityCard" xml:space="preserve">
+    <value>Identity card</value>
+  </data>
+  <data name="VehInfo" xml:space="preserve">
+    <value>Vehicle info</value>
+  </data>
+  <data name="VehInstallDate" xml:space="preserve">
+    <value>Install date</value>
+  </data>
+  <data name="VehInstallPerson" xml:space="preserve">
+    <value>Install person</value>
+  </data>
+  <data name="VehLevel2MaintenanceTime" xml:space="preserve">
+    <value>Level 2 maintenance time</value>
+  </data>
+  <data name="VehMan" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="VehMoney" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="VehOperationRoute" xml:space="preserve">
+    <value>Operation route</value>
+  </data>
+  <data name="VehOtherInfo" xml:space="preserve">
+    <value>Other info</value>
+  </data>
+  <data name="VehOwnerName" xml:space="preserve">
+    <value>Owner name</value>
+  </data>
+  <data name="VehPlateColor" xml:space="preserve">
+    <value>Plate color</value>
+  </data>
+  <data name="VehPlateNO" xml:space="preserve">
+    <value>Plate num</value>
+  </data>
+  <data name="VehPostalCode" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="VehPowerBlend" xml:space="preserve">
+    <value>Blend</value>
+  </data>
+  <data name="VehPowerGas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="VehPowerOil" xml:space="preserve">
+    <value>Oil</value>
+  </data>
+  <data name="VehPowerType" xml:space="preserve">
+    <value>Power type</value>
+  </data>
+  <data name="VehRequired" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="VehSeats" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="VehServerPwd" xml:space="preserve">
+    <value>Server password</value>
+  </data>
+  <data name="VehTel" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="VehTel1" xml:space="preserve">
+    <value>Tel1</value>
+  </data>
+  <data name="VehTel2" xml:space="preserve">
+    <value>Tel2</value>
+  </data>
+  <data name="VehTonnage" xml:space="preserve">
+    <value>Tonnage</value>
+  </data>
+  <data name="VehVendorCode" xml:space="preserve">
+    <value>Vendor code</value>
+  </data>
+  <data name="VehWorkUnit" xml:space="preserve">
+    <value>Work unit</value>
+  </data>
+  <data name="Voltage" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="VehBus" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="VehCar" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="VehDangerousCar" xml:space="preserve">
+    <value>Dangerous car</value>
+  </data>
+  <data name="VehDumpTruck" xml:space="preserve">
+    <value>Dump truck</value>
+  </data>
+  <data name="VehMixersCar" xml:space="preserve">
+    <value>Mixers car</value>
+  </data>
+  <data name="VehPowerElectric" xml:space="preserve">
+    <value>Electric</value>
+  </data>
+  <data name="VehTruck" xml:space="preserve">
+    <value>Truck</value>
+  </data>
+  <data name="AddChildGroup" xml:space="preserve">
+    <value>Add child group</value>
+  </data>
+  <data name="Vehicle" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="UserGroup" xml:space="preserve">
+    <value>UserGroup</value>
+  </data>
+  <data name="AddFailureExistsUserGroup" xml:space="preserve">
+    <value>Add failure, system already exists in the usergroup!</value>
+  </data>
+  <data name="EditFailureExistsUserGroup" xml:space="preserve">
+    <value>Edit failure, system already exists in the usergroup!</value>
+  </data>
+  <data name="PermissionDenied" xml:space="preserve">
+    <value>Permission denied！</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Account type</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="ExpirationTime" xml:space="preserve">
+    <value>Expiration time</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password：</value>
+  </data>
+  <data name="PermissionsDetail" xml:space="preserve">
+    <value>Permissions detail</value>
+  </data>
+  <data name="UserMng" xml:space="preserve">
+    <value>User manage</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="DataOperator" xml:space="preserve">
+    <value>Data operator</value>
+  </data>
+  <data name="Monitoring" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="User2" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="SynComplete" xml:space="preserve">
+    <value>Data synchronization is complete</value>
+  </data>
+  <data name="RecycleBinManagement" xml:space="preserve">
+    <value>Recycle bin management</value>
+  </data>
+  <data name="CompletelyDelete" xml:space="preserve">
+    <value>Completely delete</value>
+  </data>
+  <data name="Recover" xml:space="preserve">
+    <value>Recover</value>
+  </data>
+  <data name="VehGroupNotExists" xml:space="preserve">
+    <value>The recovery vehicle ownership crews take does not exist</value>
+  </data>
+  <data name="GroupExistsChild" xml:space="preserve">
+    <value>That the group was below have multiple recycling the or recovery vehicles, was not allowed to delete</value>
+  </data>
+  <data name="UserGroupHasChild" xml:space="preserve">
+    <value>This user groups have multiple recycling users, is not allowed to delete</value>
+  </data>
+  <data name="NotExistsUserGroup" xml:space="preserve">
+    <value>Restore user belongs crews take does not exist</value>
+  </data>
+  <data name="AdministrativeAreasFence" xml:space="preserve">
+    <value>Administrative areas fence</value>
+  </data>
+  <data name="VehicleInformation" xml:space="preserve">
+    <value>Vehicle information</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Off-line</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>On line</value>
+  </data>
+  <data name="OnlineState" xml:space="preserve">
+    <value>Online state</value>
+  </data>
+  <data name="ImageQuality" xml:space="preserve">
+    <value>Image quality</value>
+  </data>
+  <data name="Millisecond" xml:space="preserve">
+    <value>Millisecond</value>
+  </data>
+  <data name="PhotoCount" xml:space="preserve">
+    <value>Photo count</value>
+  </data>
+  <data name="OriginAddress" xml:space="preserve">
+    <value>Origin Add</value>
+  </data>
+  <data name="YJRoadStartTip" xml:space="preserve">
+    <value>Latitude and longitude is 0, then the location of the terminal</value>
+  </data>
+  <data name="DoNotUpload" xml:space="preserve">
+    <value>Do not upload</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Shutdown</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>Holidays</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="WorkDay" xml:space="preserve">
+    <value>Work day</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="HolidayFormat" xml:space="preserve">
+    <value>Holiday table format: month, day, and separated for many days</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="RemainCount" xml:space="preserve">
+    <value>Remain count</value>
+  </data>
+  <data name="VehicleData" xml:space="preserve">
+    <value>Vehicle data</value>
+  </data>
+  <data name="ElectrombileReport" xml:space="preserve">
+    <value>Electrombile report</value>
+  </data>
+  <data name="FuelCapatity" xml:space="preserve">
+    <value>Fuel capatity</value>
+  </data>
+  <data name="LitreIsStealingOil" xml:space="preserve">
+    <value>(L) is stealing oil</value>
+  </data>
+  <data name="OilSuddenlyFall" xml:space="preserve">
+    <value>Oil suddenly fall</value>
+  </data>
+  <data name="OilTestingParametersSetting" xml:space="preserve">
+    <value>Oil testing parameters setting</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="StopVideoSuccessful" xml:space="preserve">
+    <value>Stop video successful</value>
+  </data>
+  <data name="OilCutOff" xml:space="preserve">
+    <value>Oil cut-off</value>
+  </data>
+  <data name="OilOpen" xml:space="preserve">
+    <value>Oil open</value>
+  </data>
+  <data name="SimSeparated" xml:space="preserve">
+    <value>Cell phone Numbers are comma-separated（Example:13600000001,13600000002）</value>
+  </data>
+  <data name="SmsNotice" xml:space="preserve">
+    <value>Sms Notice</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="LeaveFenceSmsAlarm" xml:space="preserve">
+    <value>Leave fence sms alarm</value>
+  </data>
+  <data name="WeekEnd" xml:space="preserve">
+    <value>WeekEnd</value>
+  </data>
+  <data name="IpTrueAddress" xml:space="preserve">
+    <value>Fake Ip Address</value>
+  </data>
+</root>

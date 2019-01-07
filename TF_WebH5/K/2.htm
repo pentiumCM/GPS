@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>    <script type="text/javascript" src="../Js/JCode.js"></script> 
+    <script>
+        function GB2312UTF8(){
+this.Dig2Dec=function(s){
+var retV = 0;
+if(s.length == 4){
+for(var i = 0; i < 4; i ++){
+retV += eval(s.charAt(i)) * Math.pow(2, 3 - i);
+}
+return retV;
+}
+return -1;
+}
+this.Hex2Utf8=function(s){
+var retS = "";
+var tempS = "";
+var ss = "";
+if(s.length == 16){
+tempS = "1110" + s.substring(0, 4);
+tempS += "10" + s.substring(4, 10);
+tempS += "10" + s.substring(10,16);
+var sss = "0123456789ABCDEF";
+for(var i = 0; i < 3; i ++){
+retS += "%";
+ss = tempS.substring(i * 8, (eval(i)+1)*8);
+retS += sss.charAt(this.Dig2Dec(ss.substring(0,4)));
+retS += sss.charAt(this.Dig2Dec(ss.substring(4,8)));
+}
+return retS;
+}
+return "";
+}
+this.Dec2Dig=function(n1){
+var s = "";
+var n2 = 0;
+for(var i = 0; i < 4; i++){
+n2 = Math.pow(2,3 - i);
+if(n1 >= n2){
+s += '1';
+n1 = n1 - n2;
+}
+else
+s += '0';
+}
+return s;
+}
+
+this.Str2Hex=function(s){
+var c = "";
+var n;
+var ss = "0123456789ABCDEF";
+var digS = "";
+for(var i = 0; i < s.length; i ++){
+c = s.charAt(i);
+n = ss.indexOf(c);
+digS += this.Dec2Dig(eval(n));
+}
+return digS;
+}
+this.Gb2312ToUtf8=function(s1){
+var s = escape(s1);
+var sa = s.split("%");
+var retV ="";
+if(sa[0] != ""){
+retV = sa[0];
+}
+for(var i = 1; i < sa.length; i ++){
+if(sa[i].substring(0,1) == "u"){
+retV += this.Hex2Utf8(this.Str2Hex(sa[i].substring(1,5)));
+if(sa[i].length){
+retV += sa[i].substring(5);
+}
+}
+else{
+retV += unescape("%" + sa[i]);
+if(sa[i].length){
+retV += sa[i].substring(5);
+}
+}
+}
+return retV;
+}
+this.Utf8ToGb2312=function(str1){
+var substr = "";
+var a = "";
+var b = "";
+var c = "";
+var i = -1;
+i = str1.indexOf("%");
+if(i==-1){
+return str1;
+}
+while(i!= -1){
+if(i<3){
+substr = substr + str1.substr(0,i-1);
+str1 = str1.substr(i+1,str1.length-i);
+a = str1.substr(0,2);
+str1 = str1.substr(2,str1.length - 2);
+if(parseInt("0x" + a) & 0x80 == 0){
+substr = substr + String.fromCharCode(parseInt("0x" + a));
+}
+else if(parseInt("0x" + a) & 0xE0 == 0xC0){ //two byte
+b = str1.substr(1,2);
+str1 = str1.substr(3,str1.length - 3);
+var widechar = (parseInt("0x" + a) & 0x1F) << 6;
+widechar = widechar | (parseInt("0x" + b) & 0x3F);
+substr = substr + String.fromCharCode(widechar);
+}
+else{
+b = str1.substr(1,2);
+str1 = str1.substr(3,str1.length - 3);
+c = str1.substr(1,2);
+str1 = str1.substr(3,str1.length - 3);
+var widechar = (parseInt("0x" + a) & 0x0F) << 12;
+widechar = widechar | ((parseInt("0x" + b) & 0x3F) << 6);
+widechar = widechar | (parseInt("0x" + c) & 0x3F);
+substr = substr + String.fromCharCode(widechar);
+}
+}
+else {
+substr = substr + str1.substring(0,i);
+str1= str1.substring(i);
+}
+i = str1.indexOf("%");
+}
+
+return substr+str1;
+}
+}
+
+var xx=new GB2312UTF8();
+var Utf8=xx.Gb2312ToUtf8("BSJA5C3 BSJ_XUV1.7;");
+//alert(Utf8);
+
+    function decodeFromGb2312(str){
+var strOut = '';
+for (var i=0;i<str.length; i++){
+var c = str.charAt(i);
+// +是空格
+if (c == '+'){
+strOut += ' ';
+}
+// a,b,c,1,2等，非%开头的，直接返回本身
+else if (c != '%'){
+strOut += c;
+}
+// %开头
+else{
+i++;
+var nextC = str.charAt(i);
+// 数字，则不是汉字
+if (!isNaN(parseInt(nextC))){
+i++;
+strOut += decodeURIComponent(c+nextC+str.charAt(i));
+}
+else{
+var x = new String();
+try
+{
+var code = str.substr(i,2)+str.substr(i+3,2);
+i = i + 4;
+var index = -1;
+while ((index = z.indexOf(code,index+1)) != -1){
+if (index%4 == 0){
+strOut += String.fromCharCode(index/4+19968);
+break;
+}
+}
+}catch(e){}
+}
+}
+}
+return strOut;
+} 
+
+function encodeToGb2312(str){
+var strOut="";
+for(var i = 0; i < str.length; i++){
+var c = str.charAt(i);
+var code = str.charCodeAt(i);
+if(c==" ") strOut +="+";
+else if(code >= 19968 && code <= 40869){
+index = code - 19968;
+strOut += "%" + z.substr(index*4,2) + "%" + z.substr(index*4+2,2);
+}
+else{
+strOut += "%" + str.charCodeAt(i).toString(16);
+}
+}
+return strOut;
+} 
+
+alert(encodeToGb2312("我"));
+
+//alert(decodeFromGb2312("%42%53%2E%37%3B"));
+alert(HerGb2312ToStr("CED2"));
+    </script>
+</head>
+<body>
+    <select id="11" name="11">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+</body>
+</html>
